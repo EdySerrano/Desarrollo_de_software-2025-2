@@ -1,0 +1,27 @@
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ ls noexiste 2> errores.txt
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ ls noexiste 2>> errores.log
+   Failed: 0 units[m
+[?2004l[0;1;31mFailed to enable unit: Unit file servicio.service does not exist.[0m
+Jun 23 13:22:30 Edy unknown: [0;1;31m[0;1;39m[0;1;31mWSL (1) ERROR: ConfigApplyWindowsLibPath:2531: open /etc/ld.[m[7m>[27m
+Jun 23 13:22:30 Edy unknown: [0;1;31m[0;1;39m[0;1;31m failed 2[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2[0m[m
+Jun 23 13:22:30 Edy unknown: [0;1;31m[0;1;39m[0;1;31mFailed to connect to bus: No such file or directory[0m[m
+Jun 23 13:22:30 Edy systemd-tmpfiles[110]: [0;1;31m[0;1;39m[0;1;31mfchmod() of /tmp/.X11-unix failed: Read-only f[m[7m>[27m
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mgrep error /var/log/syslog[27mgrep error /var/log/syslog

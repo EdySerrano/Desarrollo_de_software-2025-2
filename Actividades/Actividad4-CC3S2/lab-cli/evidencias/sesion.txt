@@ -1,0 +1,683 @@
+Script started on 2025-09-06 14:06:07-05:00 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="64" LINES="24"]
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ pwd
+[?2004l/home/edy_serrano/lab-cli
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ ls
+[?2004l[0m[01;34mevidencias[0m
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ ls -l
+[?2004ltotal 4
+drwxr-xr-x 2 edy_serrano edy_serrano 4096 Sep  6 13:46 [0m[01;34mevidencias[0m
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ la -a
+[?2004l[0m[01;34m.[0m  [01;34m..[0m  [01;34mevidencias[0m
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ cd /
+[?2004l[?2004h]0;edy_serrano@Edy: /[01;32medy_serrano@Edy[00m:[01;34m/[00m$ cd l[K/lab-[K[K[K[K[K[K
+cd              cdp.dll         cdpusersvc.dll
+cdd.dll         cdprt.dll       
+cdosys.dll      cdpsvc.dll      
+]0;edy_serrano@Edy: /[01;32medy_serrano@Edy[00m:[01;34m/[00m$ cd[K[Kls
+[?2004l[0m[01;34mDocker[0m             [01;32minit[0m               [01;34mopt[0m                 [01;34msrv[0m
+[01;36mbin[0m                [01;36mlib[0m                [01;34mproc[0m                [01;34msys[0m
+[01;34mbin.usr-is-merged[0m  [01;34mlib.usr-is-merged[0m  [01;34mroot[0m                [30;42mtmp[0m
+[01;34mboot[0m               [01;36mlib64[0m              [01;34mrun[0m                 [01;34musr[0m
+[01;34mdev[0m                [01;34mlost+found[0m         [01;36msbin[0m                [01;34mvar[0m
+[01;34metc[0m                [01;34mmedia[0m              [01;34msbin.usr-is-merged[0m
+[01;34mhome[0m               [01;34mmnt[0m                [01;34msnap[0m
+[?2004h]0;edy_serrano@Edy: /[01;32medy_serrano@Edy[00m:[01;34m/[00m$ cd~ ~[C/lab-cli/
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ cd /tmp
+[?2004l[?2004h]0;edy_serrano@Edy: /tmp[01;32medy_serrano@Edy[00m:[01;34m/tmp[00m$ cd
+[?2004l[?2004h]0;edy_serrano@Edy: ~[01;32medy_serrano@Edy[00m:[01;34m~[00m$ cd /tmp~/lab-cli/
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ ls *.txt
+[?2004lls: cannot access '*.txt': No such file or directory
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ cd evidencias/
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli/evidencias[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli/evidencias[00m$ cd evidencias/[6Pls *.txt
+[?2004lsesion.txt  sesion_redactada.txt
+[?2004h]0;edy_serrano@Edy: ~/lab-cli/evidencias[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli/evidencias[00m$ cd ..
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ touch archivo1.txt archivo2.txt archi vo3.txt[K[K[Kdoc
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ ls archivo*.txt
+[?2004larchivo1.txt  archivo2.txt
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ ls | wc -l
+[?2004l4
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ ls -A | wc -l
+[?2004l4
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ ls > lista.y[Ktxt
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ printf ""G"[1P"H"o"l"a"/"[1P"\"n"[C >> lista.txt
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ ls noexiste 2[K[K[K[K[K[K[K[K[K[K[K[K[Kwc -l < lit[Ksta.txt 
+[?2004l6
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ ls noexiste 2> errores.txt
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mfind . -maxdepth 1 -name 'archivo*.tx[27m[7mt[27m[7m' -print0 | xargs -0 rm --[27m[Afind . -maxdepth 1 -name 'archivo*.txt' -print0 | xargs -0 rm --
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mfind . -name 'archivo*.txt' -exec rm [27m[7m-[27m[7mi {} +[27m[A]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ find . -name 'archivo*.txt' -exec rm -i {} +
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ echo ""a"r"c"h"i"v"o"1"."t"x"t" "a"r"c"h"i"v"o"2"."t"x"t" "[1P"[C | xa rgs rm
+[?2004lrm: cannot remove 'archivo1.txt': No such file or directory
+rm: cannot remove 'archivo2.txt': No such file or directory
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mcd /etc; ls -a > ~/etc_lista.txt[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd /etc; ls -a > ~/etc_lista.txt
+[?2004l[?2004h]0;edy_serrano@Edy: /etc[01;32medy_serrano@Edy[00m:[01;34m/etc[00m$ [K]0;edy_serrano@Edy: /etc[01;32medy_serrano@Edy[00m:[01;34m/etc[00m$ [7mfind /tmp -maxdepth 1 -type f \( -name '*.[27m[7mt[27m[7mxt' -o -name '*.doc' \) | wc -l[27m[Afind /tmp -maxdepth 1 -type f \( -name '*.txt' -o -name '*.doc' \) | wc -l
+[?2004l0
+[?2004h]0;edy_serrano@Edy: /etc[01;32medy_serrano@Edy[00m:[01;34m/etc[00m$ cd 
+[?2004l[?2004h]0;edy_serrano@Edy: ~[01;32medy_serrano@Edy[00m:[01;34m~[00m$ cd ~/lab-cli/
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ cd ~/lab-cli/[Kfind /tmp -maxdepth 1 -type f \( -name '*.txt' -o -name '*.doc' \) | wc -l
+[?2004l0
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mprintf "Línea1\nLínea2\n" > test.txt[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cprintf "Línea1\nLínea2\n" > test.txt
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ ls noexiste 2>> errores.log
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ find . -maxdepth 1 -name ``[K[K''a'r'c'h'i'v'o'*'.'t' [A]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cx't'[C | xargs echo rm
+[?2004lrm
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ nl test.txt
+[?2004l     1	Línea1
+     2	Línea2
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ wc -l lista.txt
+[?2004l6 lista.txt
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7msudo adduser nuevouser[27msudo adduser nuevouser
+[?2004l[sudo] password for edy_serrano: 
+info: Adding user `nuevouser' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `nuevouser' (1002) ...
+info: Adding new user `nuevouser' (1002) with group `nuevouser (1002)' ...
+info: Creating home directory `/home/nuevouser' ...
+info: Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for nuevouser
+Enter the new value, or press ENTER for the default
+	Full Name []: edy
+	Room Number []: 1
+	Work Phone []: 9999   87654321
+	Home Phone []: 876432
+	Other []: 1236
+Is the information correct? [Y/n] y
+info: Adding new user `nuevouser' to supplemental / extra groups `users' ...
+info: Adding user `nuevouser' to group `users' ...
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7msudo addgroup nuevogrupo; sudo usermo[27m[7md[27m[7m -aG nuevogrupo nuevouser[27m[A]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ sudo addgroup nuevogrupo; sudo usermod -aG nuevogrupo nuevouser
+[?2004linfo: Selecting GID from range 1000 to 59999 ...
+info: Adding group `nuevogrupo' (GID 1003) ...
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mtouch archivo; chmod 644 archivo[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctouch archivo; chmod 644 archivo
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mchown nuevouser:nuevogrupo archivo[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cchown nuevouser:nuevogrupo archivo
+[?2004lchown: changing ownership of 'archivo': Operation not permitted
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mps aux[27mps aux
+[?2004lUSER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0  21668 12936 ?        Ss   09:33   0:00 /sbin/init
+root           2  0.0  0.0   2616  1508 ?        Sl   09:33   0:00 /init
+root           6  0.0  0.0   2616   132 ?        Sl   09:33   0:00 plan9 --control-socket 6 --log-level 4 --server-fd 7 --pipe-f
+root          54  0.0  0.1  66832 17928 ?        S<s  09:33   0:00 /usr/lib/systemd/systemd-journald
+root          96  0.0  0.0  23992  6176 ?        Ss   09:33   0:00 /usr/lib/systemd/systemd-udevd
+systemd+     109  0.0  0.0  21452 11836 ?        Ss   09:33   0:00 /usr/lib/systemd/systemd-resolved
+systemd+     110  0.0  0.0  91020  6504 ?        Ssl  09:33   0:00 /usr/lib/systemd/systemd-timesyncd
+root         162  0.0  0.0   4236  2708 ?        Ss   09:33   0:00 /usr/sbin/cron -f -P
+message+     163  0.0  0.0   9656  5216 ?        Ss   09:33   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile
+root         174  0.0  0.0  17976  8392 ?        Ss   09:33   0:00 /usr/lib/systemd/systemd-logind
+root         178  0.0  0.1 1756096 18092 ?       Ssl  09:33   0:00 /usr/libexec/wsl-pro-service -vv
+root         197  0.0  0.0   3160  1192 hvc0     Ss+  09:33   0:00 /sbin/agetty -o -p -- \u --noclear --keep-baud - 115200,38400
+root         201  0.0  0.0  12136  2056 ?        Ss   09:33   0:00 nginx: master process /usr/sbin/nginx -g daemon on; master_pr
+www-data     202  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     203  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     204  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     205  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+syslog       206  0.0  0.0 222508  5316 ?        Ssl  09:33   0:00 /usr/sbin/rsyslogd -n -iNONE
+www-data     207  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     208  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     209  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     210  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     211  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     212  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     213  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     214  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     215  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     216  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     217  0.0  0.0  13488  4564 ?        S    09:33   0:00 nginx: worker process
+www-data     218  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     219  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     220  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     221  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     222  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     223  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     225  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     226  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+www-data     227  0.0  0.0  13488  4568 ?        S    09:33   0:00 nginx: worker process
+root         230  0.0  0.0   3116  1232 tty1     Ss+  09:33   0:00 /sbin/agetty -o -p -- \u --noclear - linux
+root         236  0.0  0.1 107028 22720 ?        Ssl  09:33   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-up
+root         325  0.0  0.0   6692  4660 pts/1    Ss   09:33   0:00 /bin/login -f
+edy_ser+     384  0.0  0.0  20256 11460 ?        Ss   09:33   0:00 /usr/lib/systemd/systemd --user
+edy_ser+     385  0.0  0.0  21148  1728 ?        S    09:33   0:00 (sd-pam)
+edy_ser+     405  0.0  0.0   6072  5164 pts/1    S+   09:33   0:00 -bash
+root       46067  0.0  0.0   2624   124 ?        Ss   13:44   0:00 /init
+root       46068  0.0  0.0   2624   132 ?        S    13:44   0:00 /init
+edy_ser+   46069  0.0  0.0   2800  1168 pts/0    Ss+  13:44   0:00 sh -c "$VSCODE_WSL_EXT_LOCATION/scripts/wslServer.sh" 6f17636
+edy_ser+   46070  0.0  0.0   2800  1104 pts/0    S+   13:44   0:00 sh /mnt/c/Users/edysa/.vscode/extensions/ms-vscode-remote.rem
+edy_ser+   46075  0.0  0.0   2800  1176 pts/0    S+   13:44   0:00 sh /home/edy_serrano/.vscode-server/bin/6f17636121051a53c88d3
+edy_ser+   46079  0.1  0.9 11872364 158924 pts/0 Sl+  13:44   0:06 /home/edy_serrano/.vscode-server/bin/6f17636121051a53c88d3e60
+edy_ser+   46204  0.1  0.5 1200676 82136 pts/0   Sl+  13:44   0:05 /home/edy_serrano/.vscode-server/bin/6f17636121051a53c88d3e60
+root       46439  0.0  0.0   2624   124 ?        Ss   13:44   0:00 /init
+root       46440  0.0  0.0   2624   132 ?        S    13:44   0:00 /init
+edy_ser+   46443  0.0  0.3 1017932 62548 pts/2   Ssl+ 13:44   0:01 /home/edy_serrano/.vscode-server/bin/6f17636121051a53c88d3e60
+root       46475  0.0  0.0   2624   124 ?        Ss   13:44   0:00 /init
+root       46476  0.0  0.0   2624   132 ?        S    13:44   0:00 /init
+edy_ser+   46477  0.0  0.3 1261740 60232 pts/0   Sl+  13:44   0:00 /home/edy_serrano/.vscode-server/bin/6f17636121051a53c88d3e60
+edy_ser+   46478  0.0  0.3 1012680 56980 pts/3   Ssl+ 13:44   0:01 /home/edy_serrano/.vscode-server/bin/6f17636121051a53c88d3e60
+edy_ser+   46498  1.4  3.7 54971436 607232 pts/0 Sl+  13:44   0:52 /home/edy_serrano/.vscode-server/bin/6f17636121051a53c88d3e60
+root       46537  0.0  0.0   2624   124 ?        Ss   13:44   0:00 /init
+root       46538  0.0  0.0   2624   132 ?        S    13:44   0:00 /init
+edy_ser+   46539  0.0  0.0   2800  1116 pts/4    Ss+  13:44   0:00 /bin/sh -c cd '/home/edy_serrano/lab-cli' && /bin/sh
+edy_ser+   46540  0.0  0.0   2800  1872 pts/4    S+   13:44   0:00 /bin/sh
+edy_ser+   46550  0.0  0.3 1012816 54064 pts/4   Sl+  13:44   0:00 /home/edy_serrano/.vscode-server/bin/6f17636121051a53c88d3e60
+edy_ser+   46575  0.0  0.0   2800  1024 pts/4    S+   13:44   0:00 /bin/sh
+polkitd    46609  0.0  0.0 308164  7092 ?        Ssl  13:44   0:00 /usr/lib/polkit-1/polkitd --no-debug
+edy_ser+   46804  0.0  0.0   6208  5352 pts/5    Ss   13:44   0:00 /bin/bash --init-file /home/edy_serrano/.vscode-server/bin/6f
+edy_ser+   46887  0.0  0.0   3148  1156 pts/5    S+   13:44   0:00 script -q evidencias/sesion.txt
+edy_ser+   46888  0.0  0.0   6088  5148 pts/6    Ss   13:44   0:00 bash -i
+edy_ser+   50905  0.0  0.0   3148  1080 pts/6    S+   14:06   0:00 script -q evidencias/sesion.txt
+edy_ser+   50906  0.0  0.0   6220  5388 pts/7    Ss   14:06   0:00 bash -i
+edy_ser+   61298  0.0  0.0   8284  4188 pts/7    R+   14:45   0:00 ps aux
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mkill -SIGTERM PID[27mkill -SIGTERM PID
+[?2004lbash: kill: PID: arguments must be process or job IDs
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mkill -9 PID[27mkill -9 PID
+[?2004lbash: kill: PID: arguments must be process or job IDs
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7msystemctl status[27msystemctl status
+[?2004l[?1h=[0;1;32m●[0m Edy[m
+    State: [0;1;32mrunning[0m[m
+    Units: 338 loaded (incl. loaded aliases)[m
+     Jobs: 0 queued[m
+   Failed: 0 units[m
+    Since: Sat 2025-09-06 09:26:14 -05; 5h 19min ago[m
+  systemd: 255.4-1ubuntu8.8[m
+  Tainted: [0;1;38;5;185mcgroupsv1[0m[m
+   CGroup: /[m
+           ├─init.scope[m
+           │ ├─[0;38;5;245m    1 /sbin/init[0m[m
+           │ ├─[0;38;5;245m    2 /init[0m[m
+           │ ├─[0;38;5;245m    6 plan9 --control-socket 6 --log-level 4 --s[m[7m>[27m
+           │ ├─[0;38;5;245m46067 /init[0m[m
+           │ ├─[0;38;5;245m46068 /init[0m[m
+           │ ├─[0;38;5;245m46069 sh -c "\"\$VSCODE_WSL_EXT_LOCATION/scripts[m[7m>[27m
+           │ ├─[0;38;5;245m46070 sh /mnt/c/Users/edysa/.vscode/extensions/m[m[7m>[27m
+           │ ├─[0;38;5;245m46075 sh /home/edy_serrano/.vscode-server/bin/6f[m[7m>[27m
+           │ ├─[0;38;5;245m46079 /home/edy_serrano/.vscode-server/bin/6f176[m[7m>[27m
+           │ ├─[0;38;5;245m46204 /home/edy_serrano/.vscode-server/bin/6f176[m[7m>[27m
+           │ ├─[0;38;5;245m46439 /init[0m[m
+           │ ├─[0;38;5;245m46440 /init[0m[m
+           │ ├─[0;38;5;245m46443 /home/edy_serrano/.vscode-server/bin/6f176[m[7m>[27m
+[7mlines 1-23[27m[K
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K[?1l>q
+[?2004lCommand 'q' not found, but can be installed with:
+sudo snap install q                       # version 1.6.3-1, or
+sudo apt  install python3-q-text-as-data  # version 3.1.6-3
+See 'snap info q' for additional versions.
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7msudo systemctl start/stop servicio[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo systemctl start/stop servicio
+[?2004l[0;1;31mUnknown command verb 'start/stop', did you mean 'start'?[0m
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7msudo systemctl enable servicio[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo systemctl enable servicio
+[?2004l[0;1;31mFailed to enable unit: Unit file servicio.service does not exist.[0m
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mjournalctl -u servicio[27mjournalctl -u servicio
+[?2004l[?1h=-- No entries --[m
+[K[?1l>[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mjournalctl -f[27mjournalctl -f
+[?2004lSep 06 14:45:41 Edy wsl-pro-service[178]: DEBUG Updated systemd status to "Connecting"
+Sep 06 14:45:41 Edy wsl-pro-service[178]: WARNING Daemon: could not connect to Windows Agent: could not get address: could not read agent port file "/mnt/c/Users/edysa/.ubuntupro/.address": open /mnt/c/Users/edysa/.ubuntupro/.address: no such file or directory
+Sep 06 14:45:41 Edy wsl-pro-service[178]: INFO Reconnecting to Windows host in 60 seconds
+Sep 06 14:45:41 Edy wsl-pro-service[178]: DEBUG Updated systemd status to "Not connected: waiting to retry"
+Sep 06 14:45:42 Edy sudo[61670]: [0;1;39m[0;1;31m[0;1;39medy_serrano : TTY=pts/7 ; PWD=/home/edy_serrano/lab-cli ; USER=root ; COMMAND=/usr/bin/systemctl start/stop servicio[0m
+Sep 06 14:45:42 Edy sudo[61670]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Sep 06 14:45:42 Edy sudo[61670]: pam_unix(sudo:session): session closed for user root
+Sep 06 14:45:49 Edy sudo[61739]: [0;1;39m[0;1;31m[0;1;39medy_serrano : TTY=pts/7 ; PWD=/home/edy_serrano/lab-cli ; USER=root ; COMMAND=/usr/bin/systemctl enable servicio[0m
+Sep 06 14:45:49 Edy sudo[61739]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Sep 06 14:45:49 Edy sudo[61739]: pam_unix(sudo:session): session closed for user root
+
+q
+^C
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mjournalctl --since "2025-08-29"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cjournalctl --since "2025-08-29"
+[?2004l[?1h=Sep 02 13:54:36 Edy kernel: [0;1;39m[0;1;31m[0;1;39mLinux version 5.15.167.4-microsoft-[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: Command line: initrd=\initrd.img WS[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: KERNEL supported cpus:[m
+Sep 02 13:54:36 Edy kernel:   Intel GenuineIntel[m
+Sep 02 13:54:36 Edy kernel:   AMD AuthenticAMD[m
+Sep 02 13:54:36 Edy kernel:   Centaur CentaurHauls[m
+Sep 02 13:54:36 Edy kernel: BIOS-provided physical RAM map:[m
+Sep 02 13:54:36 Edy kernel: BIOS-e820: [mem 0x0000000000000000-[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: BIOS-e820: [mem 0x00000000000e0000-[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: BIOS-e820: [mem 0x0000000000100000-[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: BIOS-e820: [mem 0x0000000000200000-[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: BIOS-e820: [mem 0x0000000100000000-[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: NX (Execute Disable) protection: ac[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: DMI not present or invalid.[m
+Sep 02 13:54:36 Edy kernel: Hypervisor detected: Microsoft Hype[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: Hyper-V: privilege flags low 0xae7f[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: Hyper-V Host Build:26100-10.0-5-0.5[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: Hyper-V: Nested features: 0x3e0101[m
+Sep 02 13:54:36 Edy kernel: Hyper-V: LAPIC Timer Frequency: 0x1[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: Hyper-V: Using hypercall for remote[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: clocksource: hyperv_clocksource_tsc[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: tsc: Detected 2419.201 MHz processor[m
+Sep 02 13:54:36 Edy kernel: [0;38;5;245m[0;1;31m[0;38;5;245me820: update [mem 0x00000000-0x0000[m[7m>[27m
+[7mlines 1-23[27m[K[K[?1l>
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7msudo tail -n 100 /var/log/syslog[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo tail -n 100 /var/log/syslog
+[?2004l2025-09-06T14:28:40.007805-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Daemon: connecting to Windows Agent
+2025-09-06T14:28:40.011783-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Connecting"
+2025-09-06T14:28:40.011833-05:00 Edy wsl-pro-service[178]: #033[33mWARNING#033[0m Daemon: could not connect to Windows Agent: could not get address: could not read agent port file "/mnt/c/Users/edysa/.ubuntupro/.address": open /mnt/c/Users/edysa/.ubuntupro/.address: no such file or directory
+2025-09-06T14:28:40.011843-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Reconnecting to Windows host in 60 seconds
+2025-09-06T14:28:40.011854-05:00 COMMAND=/usr/bin/systemctl start/stop servicio[0m
+Sep 06 14:45:42 Edy sudo[61670]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Sep 06 14:45:42 Edy sudo[61670]: pam_unix(sudo:session): session closed for user root
+Sep 06 14:45:49 Edy sudo[61739]: [0;1;39m[0;1;31m[0;1;39medy_serrano : TTY=pts/7 ; PWD=/home/edy_serrano/lab-cli ; USER=root ; COMMAND=/usr/bin/systemctl enable servicio[0m
+Sep 06 14:45:49 Edy sudo[61739]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Sep 06 14:45:49 Edy sudo[61739]: pam_unix(sudo:session): session closed for user root
+
+q
+^C
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mjournalctl --since "2025-08-29"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cjournalctl --since "2025-08-29"
+[?2004l[?1h=Sep 02 13:54:36 Edy kernel: [0;1;39m[0;1;31m[0;1;39mLinux version 5.15.167.4-microsoft-[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: Command line: initrd=\initrd.img WS[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: KERNEL supported cpus:[m
+Sep 02 13:54:36 Edy kernel:   Intel GenuineIntel[m
+Sep 02 13:54:36 Edy kernel:   AMD AuthenticAMD[m
+Sep 02 13:54:36 Edy kernel:   Centaur CentaurHauls[m
+Sep 02 13:54:36 Edy kernel: BIOS-provided physical RAM map:[m
+Sep 02 13:54:36 Edy kernel: BIOS-e820: [mem 0x0000000000000000-[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: BIOS-e820: [mem 0x00000000000e0000-[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: BIOS-e820: [mem 0x0000000000100000-[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: BIOS-e820: [mem 0x0000000000200000-[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: BIOS-e820: [mem 0x0000000100000000-[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: NX (Execute Disable) protection: ac[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: DMI not present or invalid.[m
+Sep 02 13:54:36 Edy kernel: Hypervisor detected: Microsoft Hype[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: Hyper-V: privilege flags low 0xae7f[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: Hyper-V Host Build:26100-10.0-5-0.5[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: Hyper-V: Nested features: 0x3e0101[m
+Sep 02 13:54:36 Edy kernel: Hyper-V: LAPIC Timer Frequency: 0x1[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: Hyper-V: Using hypercall for remote[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: clocksource: hyperv_clocksource_tsc[m[7m>[27m
+Sep 02 13:54:36 Edy kernel: tsc: Detected 2419.201 MHz processor[m
+Sep 02 13:54:36 Edy kernel: [0;38;5;245m[0;1;31m[0;38;5;245me820: update [mem 0x00000000-0x0000[m[7m>[27m
+[7mlines 1-23[27m[K[K[?1l>
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7msudo tail -n 100 /var/log/syslog[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo tail -n 100 /var/log/syslog
+[?2004l2025-09-06T14:28:40.007805-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Daemon: connecting to Windows Agent
+2025-09-06T14:28:40.011783-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Connecting"
+2025-09-06T14:28:40.011833-05:00 Edy wsl-pro-service[178]: #033[33mWARNING#033[0m Daemon: could not connect to Windows Agent: could not get address: could not read agent port file "/mnt/c/Users/edysa/.ubuntupro/.address": open /mnt/c/Users/edysa/.ubuntupro/.address: no such file or directory
+2025-09-06T14:28:40.011843-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Reconnecting to Windows host in 60 seconds
+2025-09-06T14:28:40.011854-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Not connected: waiting to retry"
+2025-09-06T14:29:40.069499-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Daemon: connecting to Windows Agent
+2025-09-06T14:29:40.070252-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Connecting"
+2025-09-06T14:29:40.070910-05:00 Edy wsl-pro-service[178]: #033[33mWARNING#033[0m Daemon: could not connect to Windows Agent: could not get address: could not read agent port file "/mnt/c/Users/edysa/.ubuntupro/.address": open /mnt/c/Users/edysa/.ubuntupro/.address: no such file or directory
+2025-09-06T14:29:40.071383-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Reconnecting to Windows host in 60 seconds
+2025-09-06T14:29:40.071555-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Not connected: waiting to retry"
+2025-09-06T14:30:40.131732-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Daemon: connecting to Windows Agent
+2025-09-06T14:30:40.132253-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Connecting"
+2025-09-06T14:30:40.132842-05:00 Edy wsl-pro-service[178]: #033[33mWARNING#033[0m Daemon: could not connect to Windows Agent: could not get address: could not read agent port file "/mnt/c/Users/edysa/.ubuntupro/.address": open /mnt/c/Users/edysa/.ubuntupro/.address: no such file or directory
+2025-09-06T14:30:40.132958-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Reconnecting to Windows host in 60 seconds
+2025-09-06T14:30:40.133004-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Not connected: waiting to retry"
+2025-09-06T14:31:40.192881-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Daemon: connecting to Windows Agent
+2025-09-06T14:31:40.193465-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Connecting"
+2025-09-06T14:31:40.194271-05:00 Edy wsl-pro-service[178]: #033[33mWARNING#033[0m Daemon: could not connect to Windows Agent: could not get address: could not read agent port file "/mnt/c/Users/edysa/.ubuntupro/.address": open /mnt/c/Users/edysa/.ubuntupro/.address: no such file or directory
+2025-09-06T14:31:40.194479-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Reconnecting to Windows host in 60 seconds
+2025-09-06T14:31:40.194517-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Not connected: waiting to retry"
+2025-09-06T14:32:40.253872-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Daemon: connecting to Windows Agent
+2025-09-06T14:32:40.254080-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Connecting"
+2025-09-06T14:32:40.255013-05:00 Edy wsl-pro-service[178]: #033[33mWARNING#033[0m Daemon: could not connect to Windows Agent: could not get address: could not read agent port file "/mnt/c/Users/edysa/.ubuntupro/.address": open /mnt/c/Users/edysa/.ubuntupro/.address: no such file or directory
+2025-09-06T14:32:40.255048-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Reconnecting to Windows host in 60 seconds
+2025-09-06T14:32:40.255074-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Not connected: waiting to retry"
+2025-09-06T14:33:40.314829-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Daemon: connecting to Windows Agent
+2025-09-06T14:33:40.320988-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Connecting"
+2025-09-06T14:33:40.321103-05:00 Edy wsl-pro-service[178]: #033[33mWARNING#033[0m Daemon: could not connect to Windows Agent: could not get address: could not read agent port file "/mnt/c/Users/edysa/.ubuntupro/.address": open /mnt/c/Users/edysa/.ubuntupro/.address: no such file or directory
+2025-09-06T14:33:40.321124-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Reconnecting to Windows host in 60 seconds
+2025-09-06T14:33:40.321147-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Not connected: waiting to retry"
+2025-09-06T14:34:40.375383-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Daemon: connecting to Windows Agent
+2025-09-06T14:34:40.375588-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Connecting"
+2025-09-06T14:34:40.375849-05:00 Edy wsl-pro-service[178]: #033[33mWARNING#033[0m Daemon: could not connect to Windows Agent: could not get address: could not read agent port file "/mnt/c/Users/edysa/.ubuntupro/.address": open /mnt/c/Users/edysa/.ubuntupro/.address: no such file or directory
+2025-09-06T14:34:40.375878-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Reconnecting to Windows host in 60 seconds
+2025-09-06T14:34:40.376122-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Not connected: waiting to retry"
+2025-09-06T14:35:40.435380-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Daemon: connecting to Windows Agent
+2025-09-06T14:35:40.435603-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Connecting"
+2025-09-06T14:35:40.435937-05:00 Edy wsl-pro-service[178]: #033[33mWARNING#033[0m Daemon: could not connect to Windows Agent: could not get address: could not read agent port file "/mnt/c/Users/edysa/.ubuntupro/.address": open /mnt/c/Users/edysa/.ubuntupro/.address: no such file or directory
+2025-09-06T14:35:40.435968-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Reconnecting to Windows host in 60 seconds
+2025-09-06T14:35:40.435984-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Not connected: waiting to retry"
+2025-09-06T14:36:40.495875-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Daemon: connecting to Windows Agent
+2025-09-06T14:36:40.496303-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Connecting"
+2025-09-06T14:36:40.497113-05:00 Edy wsl-pro-service[178]: #033[33mWARNING#033[0m Daemon: could not connect to Windows Agent: could not get address: could not read agent port file "/mnt/c/Users/edysa/.ubuntupro/.address": open /mnt/c/Users/edysa/.ubuntupro/.address: no such file or directory
+2025-09-06T14:36:40.497197-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Reconnecting to Windows host in 60 seconds
+2025-09-06T14:36:40.497234-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Not connected: waiting to retry"
+2025-09-06T14:37:40.557379-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Daemon: connecting to Windows Agent
+2025-09-06T14:37:40.557987-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Connecting"
+2025-09-06T14:37:40.558694-05:00 Edy wsl-pro-service[178]: #033[33mWARNING#033[0m Daemon: could not connect to Windows Agent: could not get address: could not read agent port file "/mnt/c/Users/edysa/.ubuntupro/.address": open /mnt/c/Users/edysa/.ubuntupro/.address: no such file or directory
+2025-09-06T14:37:40.558807-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Reconnecting to Windows host in 60 seconds
+2025-09-06T14:37:40.558845-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Not connected: waiting to retry"
+2025-09-06T14:38:40.618670-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Daemon: connecting to Windows Agent
+2025-09-06T14:38:40.624710-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Connecting"
+2025-09-06T14:38:40.624802-05:00 Edy wsl-pro-service[178]: #033[33mWARNING#033[0m Daemon: could not connect to Windows Agent: could not get address: could not read agent port file "/mnt/c/Users/edysa/.ubuntupro/.address": open /mnt/c/Users/edysa/.ubuntupro/.address: no such file or directory
+2025-09-06T14:38:40.624815-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Reconnecting to Windows host in 60 seconds
+2025-09-06T14:38:40.624828-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Not connected: waiting to retry"
+2025-09-06T14:39:40.679746-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Daemon: connecting to Windows Agent
+2025-09-06T14:39:40.680274-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Connecting"
+2025-09-06T14:39:40.680930-05:00 Edy wsl-pro-service[178]: #033[33mWARNING#033[0m Daemon: could not connect to Windows Agent: could not get address: could not read agent port file "/mnt/c/Users/edysa/.ubuntupro/.address": open /mnt/c/Users/edysa/.ubuntupro/.address: no such file or directory
+2025-09-06T14:39:40.681049-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Reconnecting to Windows host in 60 seconds
+2025-092) ...
+2025-09-06T14:43:52.445671-05:00 Edy adduser[60468]: Adding new user `nuevouser' (1002) with group `nuevouser (1002)' ...
+2025-09-06T14:43:52.485856-05:00 Edy adduser[60468]: Creating home directory `/home/nuevouser' ...
+2025-09-06T14:43:52.488657-05:00 Edy adduser[60468]: Copying files from `/etc/skel' ...
+2025-09-06T14:44:25.861866-05:00 Edy adduser[60468]: Adding new user `nuevouser' to supplemental / extra groups `users' ...
+2025-09-06T14:44:25.863927-05:00 Edy adduser[60468]: Adding user `nuevouser' to group `users' ...
+2025-09-06T14:44:35.693069-05:00 Edy addgroup[61073]: Selecting GID from range 1000 to 59999 ...
+2025-09-06T14:44:35.694620-05:00 Edy addgroup[61073]: Adding group `nuevogrupo' (GID 1003) ...
+2025-09-06T14:44:40.986161-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Daemon: connecting to Windows Agent
+2025-09-06T14:44:40.986457-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Connecting"
+2025-09-06T14:44:40.987642-05:00 Edy wsl-pro-service[178]: #033[33mWARNING#033[0m Daemon: could not connect to Windows Agent: could not get address: could not read agent port file "/mnt/c/Users/edysa/.ubuntupro/.address": open /mnt/c/Users/edysa/.ubuntupro/.address: no such file or directory
+2025-09-06T14:44:40.987775-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Reconnecting to Windows host in 60 seconds
+2025-09-06T14:44:40.988084-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Not connected: waiting to retry"
+2025-09-06T14:45:41.048088-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Daemon: connecting to Windows Agent
+2025-09-06T14:45:41.048398-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Connecting"
+2025-09-06T14:45:41.049000-05:00 Edy wsl-pro-service[178]: #033[33mWARNING#033[0m Daemon: could not connect to Windows Agent: could not get address: could not read agent port file "/mnt/c/Users/edysa/.ubuntupro/.address": open /mnt/c/Users/edysa/.ubuntupro/.address: no such file or directory
+2025-09-06T14:45:41.049057-05:00 Edy wsl-pro-service[178]: #033[36mINFO#033[0m Reconnecting to Windows host in 60 seconds
+2025-09-06T14:45:41.049077-05:00 Edy wsl-pro-service[178]: #033[37mDEBUG#033[0m Updated systemd status to "Not connected: waiting to retry"
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mtail -f /var/log/system.log[27mtail -f /var/log/system.log
+[?2004ltail: cannot open '/var/log/system.log' for reading: No such file or directory
+tail: no files remaining
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7msudo adduser devsec; sudo addgroup op[27m[7ms[27m[7m; sudo usermod -aG ops devsec; touch secreto.txt; sudo chown de[27m[7mv[27m[7msec:ops secreto.txt; sudo chmod 640 secreto.txt[27m[A[Asudo adduser devsec; sudo addgroup ops; sudo usermod -aG ops devsec; touch secreto.txt; sudo chown devsec:ops secreto.txt; sudo chmod 640 secreto.txt
+[?2004linfo: Adding user `devsec' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `devsec' (1004) ...
+info: Adding new user `devsec' (1004) with group `devsec (1004)' ...
+info: Creating home directory `/home/devsec' ...
+info: Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for devsec
+Enter the new value, or press ENTER for the default
+	Full Name []: Saul serrano
+	Room Number []: 3
+	Work Phone []: 987654321
+	Home Phone []: 5005600
+	Other []: 987456321
+Is the information correct? [Y/n] y
+info: Adding new user `devsec' to supplemental / extra groups `users' ...
+info: Adding user `devsec' to group `users' ...
+info: Selecting GID from range 1000 to 59999 ...
+info: Adding group `ops' (GID 1005) ...
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mps aux | grep bash[27mps aux | grep bash
+[?2004ledy_ser+     405  0.0  0.0   6072  5164 pts/1    S+   09:33   0:00 -[01;31m[Kbash[m[K
+edy_ser+   46804  0.0  0.0   6208  5352 pts/5    Ss   13:44   0:00 /bin/[01;31m[Kbash[m[K --init-file /home/edy_serrano/.vscode-server/bin/6f17636121051a53c88d3e605c491d22af2ba755/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-[01;31m[Kbash[m[K.sh
+edy_ser+   46888  0.0  0.0   6088  5148 pts/6    Ss   13:44   0:00 [01;31m[Kbash[m[K -i
+edy_ser+   50906  0.0  0.0   6220  5388 pts/7    Ss   14:06   0:00 [01;31m[Kbash[m[K -i
+edy_ser+   62944  0.0  0.0   4092  2080 pts/7    S+   14:47   0:00 grep --color=auto [01;31m[Kbash[m[K
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7msystemctl status systemd-logind[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csystemctl status systemd-logind
+[?2004l[?1h=[0;1;32m●[0m systemd-logind.service - User Login Management[m
+     Loaded: loaded (]8;;file://Edy/usr/lib/systemd/system/systemd-logind.service/usr/lib/systemd/system/systemd-logind.ser[m[7m>[27m
+    Drop-In: /usr/lib/systemd/system/systemd-logind.service.d[m
+             └─]8;;file://Edy/usr/lib/systemd/system/systemd-logind.service.d/dbus.confdbus.conf]8;;[m
+     Active: [0;1;32mactive (running)[0m since Sat 2025-09-06 09:26:15 -05[m[7m>[27m
+       Docs: ]8;;man:sd-login(3)man:sd-login(3)]8;;[m
+             ]8;;man:systemd-logind.service(8)man:systemd-logind.service(8)]8;;[m
+             ]8;;man:logind.conf(5)man:logind.conf(5)]8;;[m
+             ]8;;man:org.freedesktop.login1(5)man:org.freedesktop.login1(5)]8;;[m
+   Main PID: 174 (systemd-logind)[m
+     Status: "[0;1;36mProcessing requests...[0m"[m
+      Tasks: 1 (limit: 18996)[m
+   FD Store: 0[0;38;5;245m (limit: 512)[0m[m
+     Memory: 1.7M ()[m
+     CGroup: /system.slice/systemd-logind.service[m
+             └─[0;38;5;245m174 /usr/lib/systemd/systemd-logind[0m[m
+[m
+Sep 06 09:26:15 Edy systemd[1]: Starting systemd-logind.service[m[7m>[27m
+Sep 06 09:26:15 Edy systemd-logind[174]: New seat seat0.[m
+Sep 06 09:26:15 Edy systemd[1]: Started systemd-logind.service [m[7m>[27m
+Sep 06 09:26:17 Edy systemd-logind[174]: New session 1 of user [m[7m>[27m
+[7mlines 1-21/21 (END)[27m[K[K[?1l>
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mjournalctl -u systemd-logind -n 10[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cjournalctl -u systemd-logind -n 10
+[?2004l[?1h=Sep 04 21:43:32 Edy systemd[1]: Started systemd-logind.service [m[7m>[27m
+Sep 04 21:43:33 Edy systemd-logind[172]: New session 1 of user [m[7m>[27m
+[0;1;39m-- Boot 91398a5b4f0f461192dedf7c57bf5d35 --[0m[m
+Sep 05 11:10:38 Edy systemd[1]: Starting systemd-logind.service[m[7m>[27m
+Sep 05 11:10:38 Edy systemd-logind[164]: New seat seat0.[m
+Sep 05 11:10:38 Edy systemd[1]: Started systemd-logind.service [m[7m>[27m
+Sep 05 11:10:40 Edy systemd-logind[164]: New session 1 of user [m[7m>[27m
+[0;1;39m-- Boot 60d8d228c9554c5da5f1420a90d111a6 --[0m[m
+Sep 06 09:26:15 Edy systemd[1]: Starting systemd-logind.service[m[7m>[27m
+Sep 06 09:26:15 Edy systemd-logind[174]: New seat seat0.[m
+Sep 06 09:26:15 Edy systemd[1]: Started systemd-logind.service [m[7m>[27m
+Sep 06 09:26:17 Edy systemd-logind[174]: New session 1 of user [m[7m>[27m
+[7mlines 1-12/12 (END)[27m[K[K[?1l>
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7msleep 100 &[27msleep 100 &
+[?2004l[1] 63235
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mnamei -l secreto.txt[27mnamei -l secreto.txt
+[?2004lf: secreto.txt
+-rw-r----- devsec ops secreto.txt
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mid devsec[27mid devsec
+[?2004luid=1004(devsec) gid=1004(devsec) groups=1004(devsec),100(users),1005(ops)
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ clear
+[?2004l[H[2J[3J[1]+  Done                    sleep 100
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mjournalctl -p err..alert[27mjournalctl -p err..alert
+[?2004l[?1h=Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mPCI: Fatal: No config space access function found[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mkvm: already loaded the other module[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mFS-Cache: Duplicate cookie detected[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mFS-Cache: O-cookie c=00000005 [p=00000002 fl=222 nc=0 na=1][0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mFS-Cache: O-cookie d=00000000a549d797{9P.session} n=00000000e[m[7m>[27m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mFS-Cache: O-key=[10] '34323934393337343130'[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mFS-Cache: N-cookie c=00000006 [p=00000002 fl=2 nc=0 na=1][0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mFS-Cache: N-cookie d=00000000a549d797{9P.session} n=00000000d[m[7m>[27m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mFS-Cache: N-key=[10] '34323934393337343130'[0m[m
+Jun 23 13:22:30 Edy unknown: [0;1;31m[0;1;39m[0;1;31mWSL (1) ERROR: ConfigApplyWindowsLibPath:2531: open /etc/ld.[m[7m>[27m
+Jun 23 13:22:30 Edy unknown: [0;1;31m[0;1;39m[0;1;31m failed 2[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2[0m[m
+Jun 23 13:22:30 Edy unknown: [0;1;31m[0;1;39m[0;1;31mFailed to connect to bus: No such file or directory[0m[m
+Jun 23 13:22:30 Edy systemd-tmpfiles[110]: [0;1;31m[0;1;39m[0;1;31mrm_rf(/tmp/.X11-unix): Read-only file system[0m[m
+Jun 23 13:22:30 Edy systemd-tmpfiles[110]: [0;1;31m[0;1;39m[0;1;31mfchmod() of /tmp/.X11-unix failed: Read-only f[m[7m>[27m
+Jun 23 13:22:32 Edy login[360]: [0;1;31m[0;1;39m[0;1;31mPAM unable to dlopen(pam_lastlog.so): /usr/lib/security/p[m[7m>[27m
+Jun 23 13:22:32 Edy login[360]: [0;1;31m[0;1;39m[0;1;31mPAM adding faulty module: pam_lastlog.so[0m[m
+Jun 23 13:22:33 Edy login[387]: [0;1;31m[0;1;39m[0;1;31mPAM unable to dlopen(pam_lastlog.so): /usr/lib/security/p[m[7m>[27m
+Jun 23 13:22:33 Edy login[387]: [0;1;31m[0;1;39m[0;1;31mPAM adding faulty module: pam_lastlog.so[0m[m
+Jun 23 13:22:33 Edy addgroup[389]: [0;1;31m[0;1;39m[0;1;31mThe group `docker' already exists.[0m[m
+Jun 23 13:22:33 Edy addgroup[409]: [0;1;31m[0;1;39m[0;1;31maddgroup with two arguments is an unspecified operatio[m[7m>[27m
+[0;1;39m-- Boot 9630fde10eab4d13b06edb0c4d336aa5 --[0m[m
+[7mlines 1-39[27m[K[K[?1l>
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mgrep patrón archivo[27mgrep patrón archivo
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mgrep error /var/log/syslog[27mgrep error /var/log/syslog
+[?2004lgrep: /var/log/syslog: binary file matches
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7msed '/patrón/d' archivo[27msed '/patrón/d' archivo
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mawk '{print $1}' archivo[27mawk '{print $1}' archivo
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mawk -F: '{print $1}' /etc/passwd[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cawk -F: '{print $1}' /etc/passwd
+[?2004lroot
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+_apt
+nobody
+systemd-network
+systemd-timesync
+dhcpcd
+messagebus
+syslog
+systemd-resolve
+uuidd
+landscape
+polkitd
+edy_serrano
+nuevouser
+devsec
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mcut -d: -f1 /etc/passwd[27mcut -d: -f1 /etc/passwd
+[?2004lroot
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+_apt
+nobody
+systemd-network
+systemd-timesync
+dhcpcd
+messagebus
+syslog
+systemd-resolve
+uuidd
+landscape
+polkitd
+edy_serrano
+nuevouser
+devsec
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7msort archivo | uniq[27msort archivo | uniq
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mtr 'a-z' 'A-Z' < archivo[27mtr 'a-z' 'A-Z' < archivo
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mcomando | tee archivo[27mcomando | tee archivo
+[?2004lCommand 'comando' not found, did you mean:
+  command 'commando' from snap commando (1.9.3)
+See 'snap info <snapname>' for additional versions.
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ comando | tee archivo[1P[1P[1P[1P[1@m[1@a[1@n[1@d
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mfind /directorio -name "*.txt"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfind /directorio -name "*.txt"
+[?2004lfind: ‘/directorio’: No such file or directory
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mprintf "linea1: dato1\nlinea2: dato2\n" > datos.txt[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cprintf "linea1: dato1\nlinea2: dato2\n" > datos.txt
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ clear
+[?2004l[H[2J[3J[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mgrep root /etc/passwd[27mgrep root /etc/passwd
+[?2004l[01;31m[Kroot[m[K:x:0:0:[01;31m[Kroot[m[K:/[01;31m[Kroot[m[K:/bin/bash
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7msed 's/dato1/secreto/' datos.txt > nuevo.txt[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csed 's/dato1/secreto/' datos.txt > nuevo.txt
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mawk -F: '{print $1}' /etc/passwd | sort | uniq[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cawk -F: '{print $1}' /etc/passwd | sort | uniq
+[?2004l_apt
+backup
+bin
+daemon
+devsec
+dhcpcd
+edy_serrano
+games
+irc
+landscape
+list
+lp
+mail
+man
+messagebus
+news
+nobody
+nuevouser
+polkitd
+proxy
+root
+sync
+sys
+syslog
+systemd-network
+systemd-resolve
+systemd-timesync
+uucp
+uuidd
+www-data
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mprintf "hola\n" | tr 'a-z' 'A-Z' | tee mayus.txt[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cprintf "hola\n" | tr 'a-z' 'A-Z' | tee mayus.txt
+[?2004lHOLA
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mfind /tmp -mtime -5 -type f[27mfind /tmp -mtime -5 -type f
+[?2004lfind: ‘/tmp/systemd-private-60d8d228c9554c5da5f1420a90d111a6-polkit.service-um5dCJ’: Permission denied
+find: ‘/tmp/snap-private-tmp’: Permission denied
+find: ‘/tmp/systemd-private-60d8d228c9554c5da5f1420a90d111a6-systemd-logind.service-higKTJ’: Permission denied
+find: ‘/tmp/systemd-private-60d8d228c9554c5da5f1420a90d111a6-wsl-pro.service-6Nc3P9’: Permission denied
+find: ‘/tmp/systemd-private-60d8d228c9554c5da5f1420a90d111a6-systemd-resolved.service-mJxPwk’: Permission denied
+find: ‘/tmp/systemd-private-60d8d228c9554c5da5f1420a90d111a6-systemd-timesyncd.service-hiu34n’: Permission denied
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mls /etc | grep conf | sort | tee lista_conf.txt | wc -l[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls /etc | grep conf | sort | tee lista_conf.txt | wc -l
+[?2004l30
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mgrep -Ei 'error|fail' evidencias/sesion.txt | tee evidencias/ha[27m[7ml[27m[7mlazgos.txt[27m[A]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ grep -Ei 'error|fail' evidencias/sesion.txt | tee evidencias/hallazgos.txt
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ ls noexiste 2> errores.txt
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ ls noexiste 2>> errores.log
+   Failed: 0 units[m
+[?2004l[0;1;31mFailed to enable unit: Unit file servicio.service does not exist.[0m
+Jun 23 13:22:30 Edy unknown: [0;1;31m[0;1;39m[0;1;31mWSL (1) ERROR: ConfigApplyWindowsLibPath:2531: open /etc/ld.[m[7m>[27m
+Jun 23 13:22:30 Edy unknown: [0;1;31m[0;1;39m[0;1;31m failed 2[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2[0m[m
+Jun 23 13:22:30 Edy unknown: [0;1;31m[0;1;39m[0;1;31mFailed to connect to bus: No such file or directory[0m[m
+Jun 23 13:22:30 Edy systemd-tmpfiles[110]: [0;1;31m[0;1;39m[0;1;31mfchmod() of /tmp/.X11-unix failed: Read-only f[m[7m>[27m
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mgrep error /var/log/syslog[27mgrep error /var/log/syslog
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mfile lista_conf.txt && head lista_conf.txt[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfile lista_conf.txt && head lista_conf.txt
+[?2004llista_conf.txt: ASCII text
+adduser.conf
+ca-certificates.conf
+dconf
+debconf.conf
+deluser.conf
+dhcpcd.conf
+e2scrub.conf
+fuse.conf
+gai.conf
+host.conf
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mcat mayus.txt[27mcat mayus.txt
+[?2004lHOLA
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [K]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ exit
+[?2004lexit
+
+Script done on 2025-09-06 15:12:29-05:00 [COMMAND_EXIT_CODE="0"]
+: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22[0m[m
+Jun 23 13:22:30 Edy kernel: [0;1;31m[0;1;39m[0;1;31mmisc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2[0m[m
+Jun 23 13:22:30 Edy unknown: [0;1;31m[0;1;39m[0;1;31mFailed to connect to bus: No such file or directory[0m[m
+Jun 23 13:22:30 Edy systemd-tmpfiles[110]: [0;1;31m[0;1;39m[0;1;31mfchmod() of /tmp/.X11-unix failed: Read-only f[m[7m>[27m
+[?2004l[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mgrep error /var/log/syslog[27mgrep error /var/log/syslog
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mfile lista_conf.txt && head lista_conf.txt[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfile lista_conf.txt && head lista_conf.txt
+[?2004llista_conf.txt: ASCII text
+adduser.conf
+ca-certificates.conf
+dconf
+debconf.conf
+deluser.conf
+dhcpcd.conf
+e2scrub.conf
+fuse.conf
+gai.conf
+host.conf
+[?2004h]0;edy_serrano@Edy: ~/lab-cli[01;32medy_serrano@Edy[00m:[01;34m~/lab-cli[00m$ [7mcat mayus.txt[
