@@ -1,0 +1,7 @@
+OS: Windows 10 / WSL Ubuntu 22.04
+Python: 3.12.0
+GNU tar: 1.34
+shellcheck: 0.9.0
+shfmt: 3.7.0
+ruff: 0.1.7
+GNU coreutils (sha256sum): 8.32
