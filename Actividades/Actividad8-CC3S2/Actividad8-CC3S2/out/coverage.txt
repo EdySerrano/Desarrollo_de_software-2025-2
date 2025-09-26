@@ -1,0 +1,34 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.0, pluggy-1.6.0
+rootdir: /home/edy-ubuntu/Desktop/Actividad8-CC3S2
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-6.2.1
+collected 50 items
+
+tests/test_descuentos_parametrizados.py ......                           [ 12%]
+tests/test_idempotencia_cantidades.py .                                  [ 14%]
+tests/test_markers.py ........                                           [ 30%]
+tests/test_pasarela_pago_contratos.py .......                            [ 44%]
+tests/test_precios_frontera.py ....XX                                    [ 56%]
+tests/test_redondeo_acumulado.py ...                                     [ 62%]
+tests/test_refactor_suites.py .........                                  [ 80%]
+tests/test_rgr_precision_rojo.py xx                                      [ 84%]
+tests/test_rgr_precision_verde.py ss                                     [ 88%]
+tests/test_shopping_cart.py ......
+ERROR: Coverage failure: total of 70 is less than fail-under=90
+                                                                         [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.10.12-final-0 _______________
+
+Name                   Stmts   Miss  Cover   Missing
+----------------------------------------------------
+src/__init__.py            0      0   100%
+src/carrito.py            55     18    67%   9, 21, 34-35, 43-52, 60, 64, 68, 82, 97
+src/factories.py           7      7     0%   3-11
+src/shopping_cart.py      29      2    93%   9, 27
+----------------------------------------------------
+TOTAL                     91     27    70%
+FAIL Required test coverage of 90% not reached. Total coverage: 70.33%
+============= 44 passed, 2 skipped, 2 xfailed, 2 xpassed in 0.44s ==============
