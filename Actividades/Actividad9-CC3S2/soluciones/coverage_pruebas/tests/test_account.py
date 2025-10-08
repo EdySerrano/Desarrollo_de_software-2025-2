@@ -29,7 +29,7 @@ class TestAccountModel:
     def setup_class(cls):
         """Conectar y cargar los datos necesarios para las pruebas"""
         global ACCOUNT_DATA
-        with open("tests/fixtures/account_data.json") as json_data:
+        with open("tests/fixture/account_data.json") as json_data:
             ACCOUNT_DATA = json.load(json_data)
         print(f"ACCOUNT_DATA cargado: {ACCOUNT_DATA}")
 
