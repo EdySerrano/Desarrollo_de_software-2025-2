@@ -86,3 +86,48 @@ def test_delete_counter(client):
     # 3. Verificar que ya no existe
     response = client.get("/counters/delete_me")
     assert response.status_code == HTTPStatus.NOT_FOUND
+
+def test_increment_counter(client):
+    """Debe incrementar un contador con ruta dedicada PUT /counters/<name>/increment."""
+    # 1. Crear un contador
+    client.post("/counters/my_counter")
+    
+    # 2. Incrementar el contador usando la ruta dedicada
+    response = client.put("/counters/my_counter/increment")
+    assert response.status_code == HTTPStatus.OK
+    assert response.get_json()["my_counter"] == 1
+
+def test_set_counter(client):
+    """Debe establecer un valor específico al contador con PUT /counters/<name>/set."""
+    # 1. Crear un contador
+    client.post("/counters/custom")
+    
+    # 2. Establecer un valor específico
+    response = client.put("/counters/custom/set", json={"value": 10})
+    assert response.status_code == HTTPStatus.OK
+    assert response.get_json()["custom"] == 10
+
+def test_list_counters(client):
+    """Debe listar todos los contadores existentes con GET /counters."""
+    # 1. Crear algunos contadores
+    client.post("/counters/a")
+    client.post("/counters/b")
+    
+    # 2. Listar todos los contadores
+    response = client.get("/counters")
+    assert response.status_code == HTTPStatus.OK
+    data = response.get_json()
+    assert set(data.keys()) == {"a", "b"}
+
+def test_reset_counter(client):
+    """Debe resetear un contador a 0 con PUT /counters/<name>/reset."""
+    # 1. Crear un contador
+    client.post("/counters/tmp")
+    
+    # 2. Incrementar el contador
+    client.put("/counters/tmp")
+    
+    # 3. Resetear el contador
+    response = client.put("/counters/tmp/reset")
+    assert response.status_code == HTTPStatus.OK
+    assert response.get_json()["tmp"] == 0
