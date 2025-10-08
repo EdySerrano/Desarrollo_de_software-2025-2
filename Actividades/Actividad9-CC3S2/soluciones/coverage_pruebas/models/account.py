@@ -3,6 +3,7 @@ Clase Account para el ejercicio
 """
 
 import logging
+import re
 
 from sqlalchemy import Boolean, Column, Date, Integer, String
 from sqlalchemy.sql import func
@@ -62,6 +63,12 @@ class Account(db.Model):
         logger.info(f"Eliminando {self.name}")
         db.session.delete(self)
         db.session.commit()
+
+    def validate(self):
+        if not self.name:
+            raise DataValidationError("El nombre no puede estar vacío")
+        if not re.match(r"[^@]+@[^@]+\.[^@]+", self.email):
+            raise DataValidationError("El email no es válido")
 
     @classmethod
     def all(cls) -> list:

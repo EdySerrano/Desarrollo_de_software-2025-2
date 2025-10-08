@@ -157,3 +157,34 @@ class TestAccountModel:
         representation = repr(account)
         expected = f"<Account '{data['name']}'>"
         assert representation == expected
+
+    # TESTS PARA EL MÉTODO VALIDATE()
+
+    def test_validate_success_with_valid_data(self):
+        """Probar que validate() pase con datos completamente válidos."""
+        account = Account(
+            name="Usuario Válido",
+            email="usuario@example.com",
+            phone_number="123456789",
+            disabled=False
+        )
+
+        try:
+            account.validate()
+        except DataValidationError:
+            pytest.fail("validate() no debería fallar con datos válidos")
+
+    def test_validate_errors_with_invalid_data(self):
+        """Probar que validate() falle correctamente con datos inválidos."""
+        
+        # Test 1: Nombre vacio
+        account_empty_name = Account(name="", email="test@example.com")
+        with pytest.raises(DataValidationError) as excinfo:
+            account_empty_name.validate()
+        assert "El nombre no puede estar vacío" in str(excinfo.value)
+        
+        # Test 2: Email invalido (sin @)
+        account_invalid_email = Account(name="Usuario Test", email="email_invalido.com")
+        with pytest.raises(DataValidationError) as excinfo:
+            account_invalid_email.validate()
+        assert "El email no es válido" in str(excinfo.value)
