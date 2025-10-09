@@ -1,0 +1,70 @@
+Script started on 2025-10-08 18:54:00-05:00 [COMMAND="make test_all" TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="164" LINES="27"]
+cd soluciones/aserciones_pruebas   && ../../.venv/bin/pytest -q || exit 1
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                                                                                                                                         [100%][0m
+[32m[32m[1m4 passed[0m[32m in 0.04s[0m[0m
+cd soluciones/pruebas_pytest       && ../../.venv/bin/pytest -q || exit 1
+[1m======================================================================= test session starts ========================================================================[0m
+platform linux -- Python 3.12.3, pytest-8.3.3, pluggy-1.6.0
+Test order randomisation NOT enabled. Enable with --random-order or --random-order-bucket=<bucket_type>
+rootdir: /home/edy/Desarrollo_de_software-2025-2/Actividades/Actividad9-CC3S2/soluciones/pruebas_pytest
+configfile: setup.cfg
+plugins: random-order-1.2.0, Faker-37.11.0, cov-5.0.0
+[1mcollecting ... [0m[1mcollected 11 items                                                                                                                                                 [0m
+
+test_triangle.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                                                                                                                 [100%][0m
+
+---------- coverage: platform linux, python 3.12.3-final-0 -----------
+Name               Stmts   Miss Branch BrPart  Cover   Missing
+--------------------------------------------------------------
+test_triangle.py      30      0      0      0   100%
+triangle.py           10      0      8      0   100%
+--------------------------------------------------------------
+TOTAL                 40      0      8      0   100%
+
+
+[32m======================================================================== [32m[1m11 passed[0m[32m in 0.11s[0m[32m ========================================================================[0m
+cd soluciones/pruebas_fixtures     && ../../.venv/bin/pytest -q || exit 1
+[32m.[0m[32m.[0m[32m                                                                                                                                                           [100%][0m
+[32m[32m[1m2 passed[0m[32m in 0.34s[0m[0m
+cd soluciones/coverage_pruebas     && ../../.venv/bin/pytest --cov=models --cov-report term-missing -q || exit 1
+[1m======================================================================= test session starts ========================================================================[0m
+platform linux -- Python 3.12.3, pytest-8.3.3, pluggy-1.6.0
+Test order randomisation NOT enabled. Enable with --random-order or --random-order-bucket=<bucket_type>
+rootdir: /home/edy/Desarrollo_de_software-2025-2/Actividades/Actividad9-CC3S2/soluciones/coverage_pruebas
+configfile: setup.cfg
+testpaths: tests
+plugins: random-order-1.2.0, Faker-37.11.0, cov-5.0.0
+[1mcollecting ... [0m[1mcollecting 12 items                                                                                                                                                [0m[1mcollected 12 items                                                                                                                                                 [0m
+
+tests/test_account.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                                                                                                           [100%][0m
+
+---------- coverage: platform linux, python 3.12.3-final-0 -----------
+Name                 Stmts   Miss Branch BrPart  Cover   Missing
+----------------------------------------------------------------
+models/__init__.py       6      0      0      0   100%
+models/account.py       53      0     14      0   100%
+----------------------------------------------------------------
+TOTAL                   59      0     14      0   100%
+
+
+[32m======================================================================== [32m[1m12 passed[0m[32m in 0.93s[0m[32m ========================================================================[0m
+cd soluciones/factories_fakes      && ../../.venv/bin/pytest -q || exit 1
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                                                                                                                                     [100%][0m
+[32m[32m[1m8 passed[0m[32m in 0.43s[0m[0m
+cd soluciones/mocking_objetos      && ../../.venv/bin/pytest -q || exit 1
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                                                                                                                                      [100%][0m
+[32m[32m[1m7 passed[0m[32m in 0.13s[0m[0m
+cd soluciones/practica_tdd         && ../../.venv/bin/pytest -q || exit 1
+[1m======================================================================= test session starts ========================================================================[0m
+platform linux -- Python 3.12.3, pytest-8.3.3, pluggy-1.6.0
+Test order randomisation NOT enabled. Enable with --random-order or --random-order-bucket=<bucket_type>
+rootdir: /home/edy/Desarrollo_de_software-2025-2/Actividades/Actividad9-CC3S2/soluciones/practica_tdd
+configfile: setup.cfg
+plugins: random-order-1.2.0, Faker-37.11.0, cov-5.0.0
+[1mcollecting ... [0m[1mcollected 9 items                                                                                                                                                  [0m
+
+test_counter.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                                                                                                                    [100%][0m
+
+[32m======================================================================== [32m[1m9 passed[0m[32m in 0.17s[0m[32m =========================================================================[0m
+
+Script done on 2025-10-08 18:54:05-05:00 [COMMAND_EXIT_CODE="0"]

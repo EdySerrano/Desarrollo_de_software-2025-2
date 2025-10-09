@@ -1,0 +1,33 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.3, pluggy-1.6.0 -- /home/edy/Desarrollo_de_software-2025-2/Actividades/Actividad9-CC3S2/.venv/bin/python3
+cachedir: .pytest_cache
+Test order randomisation NOT enabled. Enable with --random-order or --random-order-bucket=<bucket_type>
+rootdir: /home/edy/Desarrollo_de_software-2025-2/Actividades/Actividad9-CC3S2/soluciones/coverage_pruebas
+configfile: setup.cfg
+testpaths: tests
+plugins: random-order-1.2.0, Faker-37.11.0, cov-5.0.0
+collecting ... collected 12 items
+
+tests/test_account.py::TestAccountModel::test_create_an_account PASSED   [  8%]
+tests/test_account.py::TestAccountModel::test_create_all_accounts PASSED [ 16%]
+tests/test_account.py::TestAccountModel::test_to_dict PASSED             [ 25%]
+tests/test_account.py::TestAccountModel::test_from_dict PASSED           [ 33%]
+tests/test_account.py::TestAccountModel::test_update_account_success PASSED [ 41%]
+tests/test_account.py::TestAccountModel::test_update_account_no_id_error PASSED [ 50%]
+tests/test_account.py::TestAccountModel::test_delete_account PASSED      [ 58%]
+tests/test_account.py::TestAccountModel::test_find_account_exists PASSED [ 66%]
+tests/test_account.py::TestAccountModel::test_find_account_not_exists PASSED [ 75%]
+tests/test_account.py::TestAccountModel::test_repr_account PASSED        [ 83%]
+tests/test_account.py::TestAccountModel::test_validate_success_with_valid_data PASSED [ 91%]
+tests/test_account.py::TestAccountModel::test_validate_errors_with_invalid_data PASSED [100%]
+
+---------- coverage: platform linux, python 3.12.3-final-0 -----------
+Name                 Stmts   Miss Branch BrPart  Cover   Missing
+----------------------------------------------------------------
+models/__init__.py       6      0      0      0   100%
+models/account.py       53      0     14      0   100%
+----------------------------------------------------------------
+TOTAL                   59      0     14      0   100%
+
+
+============================== 12 passed in 0.92s ==============================
