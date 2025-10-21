@@ -15,7 +15,7 @@ jobs:
         if: github.event_name == 'pull_request' && github.event.action == 'opened'
         uses: actions/add-to-project@v1
         with:
-          project-url: https://github.com/users/<TU_USUARIO>/projects/<NUMERO_PROYECTO>
+          project-url: https://github.com/users/EdySerrano/projects/7
           github-token: ${{ secrets.GITHUB_TOKEN }}
           field: Status
           field-value: "In Progress"
@@ -24,7 +24,7 @@ jobs:
         if: github.event_name == 'issues' && github.event.action == 'closed'
         uses: actions/add-to-project@v1
         with:
-          project-url: https://github.com/users/<TU_USUARIO>/projects/<NUMERO_PROYECTO>
+          project-url: https://github.com/users/EdySerrano/projects/7
           github-token: ${{ secrets.GITHUB_TOKEN }}
           field: Status
           field-value: "Done"
