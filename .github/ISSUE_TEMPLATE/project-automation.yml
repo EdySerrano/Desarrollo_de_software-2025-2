@@ -4,36 +4,27 @@ on:
   issues:
     types: [opened, closed]
   pull_request:
-    types: [opened, closed, merged]
+    types: [opened, closed]
 
 jobs:
-  update-project:
+  automate-kanban:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Move issue to "In Progress" when PR is linked
+      - name: Move issue to "In Progress" when PR is opened
         if: github.event_name == 'pull_request' && github.event.action == 'opened'
-        uses: actions/github-script@v7
+        uses: actions/add-to-project@v1
         with:
-          script: |
-            const projectNumber = 1;
-            const columnName = "In Progress";
-            const { owner, repo } = context.repo;
-            const issue_number = context.payload.pull_request.number;
+          project-url: https://github.com/users/<TU_USUARIO>/projects/<NUMERO_PROYECTO>
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          field: Status
+          field-value: "In Progress"
 
-            const issue = await github.rest.issues.listEvents({
-              owner,
-              repo,
-              issue_number
-            });
-
-            console.log(`Moving issue ${issue_number} to ${columnName}`);
-
-      - name: Move issue to "Done" when closed
+      - name: Move issue to "Done" when issue is closed
         if: github.event_name == 'issues' && github.event.action == 'closed'
-        uses: actions/github-script@v7
+        uses: actions/add-to-project@v1
         with:
-          script: |
-            const projectNumber = 1;
-            const columnName = "Done";
-            console.log(`Issue cerrado: moviendo a columna ${columnName}`);
+          project-url: https://github.com/users/<TU_USUARIO>/projects/<NUMERO_PROYECTO>
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          field: Status
+          field-value: "Done"
