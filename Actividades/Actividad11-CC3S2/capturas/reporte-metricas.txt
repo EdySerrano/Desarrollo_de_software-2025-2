@@ -1,0 +1,23 @@
+Analisis de Metricas del Kanban Board - Ejercicio 6
+
+Periodo analizado: 12 de octubre - 21 de octubre
+
+Descripción general:
+El grafico muestra la evolucion de las historias de usuario (issues) en el proyecto durante el periodo indicado. 
+Las matricas reflejan dos tipos de estados:
+- Linea verde: Issues abiertas (Open)
+- Linea morada: Issues completadas (Completed)
+
+Observaciones:
+1. Entre el 12 y el 18 de octubre no se registro actividad, las metricas permanecen en cero.
+2. A partir del 19 de octubre se observa un aumento pronunciado en la cantidad de issues abiertas, lo que indica un incremento en la creacion de tareas o historias de usuario.
+3. El 21 de octubre, el sistema muestra:
+   - 7 issues abiertas (Open)
+   - 3 issues completadas (Completed)
+4. Esto sugiere que el equipo esta en desarrollo de las tareas, con una proporción aproximada de 70% de trabajo en progreso y 30% completado.
+5. El crecimiento simultáneo de ambas metricas sugiere que las tareas se estan gestionando activamente, aunque la velocidad de finalizacion aun no iguala el ritmo de creacion.
+
+Estado final al 21 de octubre:
+- Issues abiertas: 7
+- Issues completadas: 3
+- Porcentaje de finalizacion: 30%

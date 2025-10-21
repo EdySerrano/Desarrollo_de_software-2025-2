@@ -113,12 +113,21 @@
 
 
 ### Ejercicio 4: Tiempo
-
-
+* Esfuerzo estimado en (horas)
+    ![alt text](capturas/campo-esfuerzo.png)
 
 ### Ejercicio 5: Stakeholder Feedback
+* **Enlace:** [Exportar a CSV](https://github.com/users/EdySerrano/projects/7/views/1?pane=issue&itemId=134828550&issue=EdySerrano%7CDesarrollo_de_software-2025-2%7C12)
 
-
+* Historia priorizada
+    ![alt text](capturas/export-csv.png)
 
 ### Ejercicio 6: Análisis
 
+* **Métricas:** Cycle time, cuellos de botella (Review/QA: 3 días).
+
+    ![alt text](capturas/metricas.png)
+
+* **Reporte:**
+
+    [reporte-metricas.txt](capturas/reporte-metricas.txt)
