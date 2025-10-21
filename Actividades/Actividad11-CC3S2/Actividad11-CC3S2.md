@@ -1,0 +1,113 @@
+# Actividad 8: Gestión ágil de proyectos con GitHub Projects, configuración de Kanban Board y creación de historias de usuario
+
+* **Repositorio:** [Repositorio de GitHub](https://github.com/EdySerrano/Desarrollo_de_software-2025-2)
+* **Proyecto Kanban:** [Tablero de GitHub Projects](https://github.com/users/EdySerrano/projects/7)
+
+
+## Parte 1: Kanban Board
+* **Tablero inicial:** Captura de "Devops-agile" con columnas predeterminadas.
+
+![alt text](capturas/tablero-inicial.png)
+
+* **Columnas renombradas:** 
+    * Ready -> Icebox
+    
+    ![alt text](capturas/icebox.png)
+
+    * In Review -> Review/QA.
+
+    ![alt text](capturas/review-qa.png)
+
+* **Tablero final:** Columnas Product Backlog y Sprint Backlogs, orden correcto.
+
+![alt text](capturas/tablero-final-parte1.png)
+
+## Parte 2: Issue template
+* **Configuración:** *Settings > Features > Custom template.*
+
+![alt text](capturas/template-config.png)
+
+* **Template User Story:** Markdown de ejemplo.
+    * **Enlace:** [.github/ISSUE_TEMPLATE/user-story.md](https://github.com/EdySerrano/Desarrollo_de_software-2025-2/blob/main/.github/ISSUE_TEMPLATE/user-story.md)
+
+    * **Commit:** 
+
+    ![alt text](capturas/commit-template.png)
+
+
+## Parte 3: Historias de usuario
+* **7 Issues:**
+    * **Enlaces:** 
+        * [Counter](https://github.com/EdySerrano/Desarrollo_de_software-2025-2/issues/1)
+        * [Multiple-Counters](https://github.com/EdySerrano/Desarrollo_de_software-2025-2/issues/2)
+        * [Persist](https://github.com/EdySerrano/Desarrollo_de_software-2025-2/issues/3)
+        * [Reset](https://github.com/EdySerrano/Desarrollo_de_software-2025-2/issues/4)
+        * [Deploy](https://github.com/EdySerrano/Desarrollo_de_software-2025-2/issues/5)
+        * [Remove](https://github.com/EdySerrano/Desarrollo_de_software-2025-2/issues/6)
+        * [Update](https://github.com/EdySerrano/Desarrollo_de_software-2025-2/issues/7)
+
+    * **Creación:**
+
+        ![alt text](capturas/creacion-issue.png)
+
+
+* **Límite:** New Issues con límite 7.
+
+    ![alt text](capturas/limite-new-issues.png)
+
+* **Priorización:** Counter al inicio de Product Backlog, Multiple Counters en Icebox, resto en New Issues.
+
+    ![alt text](capturas/tablero-parte3.png)
+
+## Parte 4: Refinamiento y labels
+
+* **Triage:**
+
+    * **Deploy bajo Persist:**
+
+        ![alt text](capturas/triage-deploy.png)
+
+    * **Remove a Icebox:**
+
+        ![alt text](capturas/triage-remove.png)
+
+    * **Update tras Reset:**
+
+        ![alt text](capturas/triage-update.png)
+
+* **Edición:** Detalles y criterios para todas las historias en Product Backlog.
+
+    ![alt text](capturas/edit-counter.png)
+
+* **Label Technical Debt:** Amarillo #FBCA04.
+
+    ![alt text](capturas/label-technical-debt.png)
+
+* **Labels Asignados:** enhancement para la mayoría, technical debt para Deploy.
+
+    ![alt text](capturas/labels-visibles.png)
+
+## Ejercicios
+### Ejercicio 1: Epic
+
+
+
+### Ejercicio 2: Etiquetas
+
+
+
+### Ejercicio 3: GitHub Actions
+
+
+
+### Ejercicio 4: Tiempo
+
+
+
+### Ejercicio 5: Stakeholder Feedback
+
+
+
+### Ejercicio 6: Análisis
+
+
