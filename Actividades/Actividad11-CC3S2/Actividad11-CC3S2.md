@@ -90,14 +90,26 @@
 ## Ejercicios
 ### Ejercicio 1: Epic
 
+* **Enlace:** [Epic: Implementar servicio de contador](https://github.com/EdySerrano/Desarrollo_de_software-2025-2/issues/10)
 
+    ![alt text](capturas/epic.png)
 
 ### Ejercicio 2: Etiquetas
+* **Labels:** High/Medium/Low Priority, In Review, Blocked, Ready for Testing.
 
+    ![alt text](capturas/nuevas-labels.png)
 
+* **Tablero:**
+
+    ![alt text](capturas/tablero-labels-ej2.png)
 
 ### Ejercicio 3: GitHub Actions
+* **Enlace:** [.github/workflows/kanban-automation.yml](https://github.com/EdySerrano/Desarrollo_de_software-2025-2/blob/main/.github/workflows/project-automation.yml)
+* **Evidencia:**
+    ![alt text](capturas/automation-proof.png)
 
+* **Archivo de automatizacion:**
+    ![alt text](capturas/workflow.png)
 
 
 ### Ejercicio 4: Tiempo
@@ -109,5 +121,4 @@
 
 
 ### Ejercicio 6: Análisis
-
 
