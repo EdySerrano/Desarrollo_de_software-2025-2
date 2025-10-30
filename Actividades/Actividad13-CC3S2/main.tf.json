@@ -1,0 +1,31 @@
+{
+  "variable": {
+    "port": {
+      "default": "3000",
+      "description": "Variable PORT extra\u00edda de config.cfg"
+    }
+  },
+  "resource": {
+    "null_resource": {
+      "app_startup": {
+        "provisioner": [
+          {
+            "local-exec": {
+              "command": "echo 'Arrancando 8080'"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "output": {
+    "app_port": {
+      "value": "${var.port}",
+      "description": "Puerto de la aplicaci\u00f3n iniciada"
+    },
+    "startup_message": {
+      "value": "Aplicaci\u00f3n iniciada en puerto 8080",
+      "description": "Mensaje de inicio equivalente al script legacy"
+    }
+  }
+}
