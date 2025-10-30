@@ -1,8 +1,8 @@
 {
   "variable": {
     "port": {
-      "default": "3000",
-      "description": "Application server port number for service binding"
+      "default": "8080",
+      "description": "Variable PORT extra\u00edda de config.cfg"
     }
   },
   "resource": {

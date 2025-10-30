@@ -1,0 +1,21 @@
+{
+  "resource": {
+    "null_resource": {
+      "network_setup": {
+        "provisioner": [
+          {
+            "local-exec": {
+              "command": "echo 'Network setup for port 8080'"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "output": {
+    "network_port": {
+      "value": "8080",
+      "description": "Puerto configurado para la aplicaci\u00f3n"
+    }
+  }
+}
