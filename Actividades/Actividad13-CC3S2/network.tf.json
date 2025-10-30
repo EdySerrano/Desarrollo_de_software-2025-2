@@ -15,7 +15,7 @@
   "output": {
     "network_port": {
       "value": "8080",
-      "description": "Puerto configurado para la aplicaci\u00f3n"
+      "description": "Puerto configurado para la aplicación"
     }
   }
 }

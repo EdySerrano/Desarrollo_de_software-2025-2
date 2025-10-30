@@ -2,7 +2,7 @@
   "variable": {
     "port": {
       "default": "8080",
-      "description": "Variable PORT extra\u00edda de config.cfg"
+      "description": "Variable PORT extraída de config.cfg"
     }
   },
   "resource": {
@@ -21,10 +21,10 @@
   "output": {
     "app_port": {
       "value": "${var.port}",
-      "description": "Puerto de la aplicaci\u00f3n iniciada"
+      "description": "Puerto de la aplicación iniciada"
     },
     "startup_message": {
-      "value": "Aplicaci\u00f3n iniciada en puerto 8080",
+      "value": "Aplicación iniciada en puerto 8080",
       "description": "Mensaje de inicio equivalente al script legacy"
     }
   }

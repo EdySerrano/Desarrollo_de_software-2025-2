@@ -1,5 +1,7 @@
 ### Actividad 13: Escribiendo infraestructura como código en un entorno local con Terraform
 
+El propósito de la actividad es aprender a automatizar la creación y gestión de infraestructura como código en un entorno local utilizando Terraform, generando de forma automática los archivos de configuración (network.tf.json y main.tf.json) mediante un script en Python. Con ello se busca evitar configuraciones manuales, comprender cómo Terraform detecta y corrige cambios o desvíos en la infraestructura, y practicar la migración de entornos existentes a código, todo sin depender de proveedores en la nube ni de servicios externos.
+
 #### Fase 0: Preparación 
 
 1. **Revisa** el [laboratorio 5](https://github.com/kapumota/Curso-CC3S2/tree/main/labs/Laboratorio5)  :
@@ -135,11 +137,46 @@ Cuando cambian variables de configuración, Terraform los mapea a **triggers** q
    * Detección de drift (*remediation*).
    * Migración de legacy.
    * Estructura limpia, módulos, variables sensibles.
+
 2. **Preguntas abiertas**:
 
-   * ¿Cómo extenderías este patrón para 50 módulos y 100 entornos?
-   * ¿Qué prácticas de revisión de código aplicarías a los `.tf.json`?
-   * ¿Cómo gestionarías secretos en producción (sin Vault)?
-   * ¿Qué workflows de revisión aplicarías a los JSON generados?
+   * **Cómo extenderías este patrón para 50 módulos y 100 entornos?**
+
+        * Estructura y composición: Manter módulos pequeños y con responsabilidad única, tambien crear un registry interno (repo monorepo con Terraform Registry privado) y versionar cada módulo.
+
+        * Configuración por entorno: Usar archivos *.tfvars o parámetros por entorno; o usa overlays para evitar duplicación.
+
+        * Automatización: Pipelines CI/CD que lint -> validate -> plan -> apply, tambien generar builds automáticos del módulo.
+
+        * Operaciones: Nombres y tags estándares, límites de recursos por entorno y monitoreo.
+
+   * **Qué prácticas de revisión de código aplicarías a los `.tf.json`?**
+
+        * Validar con terraform validate, tflint y tfsec.
+
+        * Revisar solo el origen que genera el JSON, no el archivo final.
+
+        * Usar pre-commit hooks y CI para detectar errores y formato.
+
+        * Verificar que no haya secretos ni cambios en recursos sensibles.
+
+   * **Cómo gestionarías secretos en producción (sin Vault)?**
+        * Usar Secret Manager del proveedor cloud (AWS, Azure).
+
+        * Cifrar variables.
+
+        * Guardar secretos en variables del pipeline (CI/CD), no en el código.
+
+        * Asegurar cifrado del state remoto y rotar claves periódicamente.
+
+   * **Qué workflows de revisión aplicarías a los JSON generados?**
+        * Regenerar el JSON automáticamente en CI y comparar con el commit.
+
+        * Ejecutar terraform plan y mostrar el diff antes de aplicar.
+
+        * Requerir aprobación manual para cambios en producción.
+
+        * Automatizar validación y seguridad antes del merge.
+   
 
 
