@@ -5,7 +5,7 @@
                 {
                     "type": "string",
                     "default": "hello-devops",
-                    "description": "Nombre del servidor local"
+                    "description": "Nombre del curso"
                 }
             ]
         },
