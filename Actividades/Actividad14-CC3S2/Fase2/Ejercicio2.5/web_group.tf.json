@@ -1,0 +1,52 @@
+{
+    "module": {
+        "web": [
+            {
+                "resource": [
+                    {
+                        "null_resource": [
+                            {
+                                "web_0": [
+                                    {
+                                        "triggers": {
+                                            "factory_uuid": "c3ff53a6-8d64-40cc-819d-7f8411a05c61",
+                                            "timestamp": "2025-11-04T22:39:33.117435"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "null_resource": [
+                            {
+                                "web_1": [
+                                    {
+                                        "triggers": {
+                                            "factory_uuid": "c3ff53a6-8d64-40cc-819d-7f8411a05c61",
+                                            "timestamp": "2025-11-04T22:39:33.117435"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "null_resource": [
+                            {
+                                "web_2": [
+                                    {
+                                        "triggers": {
+                                            "factory_uuid": "c3ff53a6-8d64-40cc-819d-7f8411a05c61",
+                                            "timestamp": "2025-11-04T22:39:33.117435"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
