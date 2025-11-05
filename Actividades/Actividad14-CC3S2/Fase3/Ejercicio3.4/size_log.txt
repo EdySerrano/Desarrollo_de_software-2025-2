@@ -1,0 +1,2 @@
+count=15 path=/home/edy/Desarrollo_de_software-2025-2/Actividades/Actividad14-CC3S2/Fase3/Ejercicio3.4/terraform/main_15.tf.json bytes=7431
+count=150 path=/home/edy/Desarrollo_de_software-2025-2/Actividades/Actividad14-CC3S2/Fase3/Ejercicio3.4/terraform/main_150.tf.json bytes=74356

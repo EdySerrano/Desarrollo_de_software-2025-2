@@ -1,0 +1,11 @@
+{
+  "resource": {
+    "mock_cloud_bucket": {
+      "app_bucket": {
+        "name": "app_bucket",
+        "owner": "team-a",
+        "env": "dev"
+      }
+    }
+  }
+}
