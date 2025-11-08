@@ -1,0 +1,24 @@
+{
+  "output": {
+    "users_map": {
+      "value": {
+        "read": [
+          "audit-team",
+          "user-01",
+          "user-02"
+        ],
+        "write": [
+          "infrastructure-team",
+          "user-03",
+          "automation-01"
+        ],
+        "admin": [
+          "manager-team"
+        ]
+      }
+    },
+    "users_json": {
+      "value": "{\"admin\": [\"manager-team\"], \"read\": [\"audit-team\", \"user-01\", \"user-02\"], \"write\": [\"infrastructure-team\", \"user-03\", \"automation-01\"]}"
+    }
+  }
+}

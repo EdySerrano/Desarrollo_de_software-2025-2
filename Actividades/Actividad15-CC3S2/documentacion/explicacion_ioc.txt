@@ -1,0 +1,18 @@
+Inversión de Control (IoC)
+
+La Inversión de Control (IoC) es un principio de diseño que invierte la responsabilidad
+de obtener dependencias y controlar el flujo entre componentes: en lugar de que un
+componente cree o busque sus dependencias, recibe esas dependencias desde el exterior.
+
+El patrón más común para aplicar IoC es la Inyección de Dependencias (DI): objetos
+o servicios necesarios se proporcionan vía constructor, setters o un contenedor.
+Esto reduce el acoplamiento, mejora la reutilización y facilita las pruebas unitarias
+porque las dependencias pueden sustituirse por dobles (mocks/stubs).
+
+IoC también aparece en arquitecturas guiadas por eventos o frameworks (callbacks, hooks,
+inversión de control de flujo), donde el framework llama al código del usuario en lugar
+de que el usuario controle el flujo directamente.
+
+Ventajas: mayor modularidad, testabilidad y separación de responsabilidades.
+Desventajas: curva de aprendizaje, posible complejidad añadida por contenedores y menos
+visibilidad del flujo en código si no se documenta bien.

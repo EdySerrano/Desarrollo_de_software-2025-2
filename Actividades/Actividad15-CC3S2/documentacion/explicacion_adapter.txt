@@ -1,0 +1,24 @@
+Patrón Adapter usado en producción
+
+El patrón Adapter actúa como un traductor entre dos interfaces incompatibles, permitiendo
+que módulos existentes (legacy o de terceros) se utilicen sin modificar su código.
+En producción se usa para encapsular las diferencias de protocolo, formatos o contratos
+entre sistemas, minimizando el impacto en la lógica de negocio.
+
+Buenas prácticas:
+- Encapsular la lógica de adaptación en una clase o módulo aislado; evita "fugar" la
+  adaptación por toda la base de código.
+- Implementar tests unitarios del adapter (mocks/stubs para las dependencias externas)
+  y tests de integración que verifiquen los flujos end-to-end.
+- Añadir logging y métricas en el adapter para monitorizar errores de traducción,
+  latencias y tasas de fallo (útil para detectar cambios en APIs externas).
+- Diseñar la API del adapter con versiones o feature flags para permitir migraciones
+  suaves y rollbacks sin interrumpir consumidores.
+
+Consideraciones operativas:
+- Manejar errores y timeouts explícitamente; no propagar excepciones crípticas al resto
+  del sistema.
+- Evitar adaptadores que realicen mucha lógica de negocio; su responsabilidad debe
+  limitarse a la transformación y mapeo de datos.
+- Documentar claramente los supuestos (contratos, formatos esperados) y los límites
+  de compatibilidad.

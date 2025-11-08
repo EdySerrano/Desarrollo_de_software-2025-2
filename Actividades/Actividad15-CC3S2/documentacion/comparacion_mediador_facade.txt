@@ -1,0 +1,29 @@
+Comparación: Mediator vs Facade
+
+- Facade: ofrece una interfaz simplificada y cohesiva hacia un subsistema complejo.
+- Mediator: centraliza y orquesta la comunicación entre múltiples componentes,
+  evitando que se conozcan directamente entre sí.
+
+Intención y uso:
+- Facade se usa cuando quieres reducir la complejidad de uso de una API o conjunto
+  de clases y exponer solo operaciones de alto nivel. Es un "envoltorio" que oculta
+  detalles de implementación.
+- Mediator se usa cuando la lógica de interacción entre componentes es compleja y
+  cambiable; el mediador encapsula esas reglas de colaboración para evitar un
+  acoplamiento en malla entre componentes.
+
+Diferencias clave:
+- Dependencias: Facade no elimina dependencias entre componentes internos (solo las
+  oculta al cliente); Mediator rompe dependencias directas porque los componentes
+  solo conocen al mediador.
+- Responsabilidad: Facade simplifica interfaz; Mediator coordina comportamiento.
+- Riesgo: Facade suele ser ligero; Mediator puede convertirse en un "god object"
+  si acumula demasiada lógica.
+
+Cuándo elegir:
+- Usa Facade para una API más fácil de usar, reducir superficie y agrupar operaciones.
+- Usa Mediator cuando necesites centralizar reglas de interacción o cuando las
+  relaciones entre componentes cambien frecuentemente.
+
+En práctica, ambos pueden coexistir, un Facade puede delegar a un Mediator para
+orquestación interna, combinando simplificación de interfaz y coordinación central.

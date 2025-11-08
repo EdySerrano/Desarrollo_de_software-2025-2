@@ -1,0 +1,13 @@
+{
+  "output": {
+    "endpoint": {
+      "value": "https://storage.example.com/hello-world-storage-bucket"
+    },
+    "network_id": {
+      "value": "net-abc123"
+    },
+    "bucket_name": {
+      "value": "hello-world-storage-bucket"
+    }
+  }
+}
