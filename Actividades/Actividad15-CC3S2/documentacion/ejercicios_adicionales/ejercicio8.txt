@@ -1,0 +1,21 @@
+Ejercicio 8 — Política de gestión de releases para un registro privado
+
+Política propuesta
+- Cadencia: releases a demanda; parches (PATCH) tan pronto como se confirme un bug; MINOR agrupando features; MAJOR para breaking changes.
+- Criterios mínimos para publicar:
+  1. PR aprobado y merged en main.
+  2. CI verde (tests unitarios, integración y linters).
+  3. Changelog actualizado (convencional commits o changelog generator).
+  4. Tests de compatibilidad para consumers críticos (si aplica).
+
+Proceso
+- Pre-merge: PR con pruebas y changelog.
+- Post-merge: CI determina affected module, ejecuta jobs de packaging y publica a staging registry.
+- Release: al aprobar release candidate, bump version, tag `vX.Y.Z`, y push tags; publicar a registry público/privado.
+
+Roles y gobernanza
+- Ownership por modulo: equipos responsables de revisar y aprobar.
+- Politica de acceso: solo CI y mantenedores pueden publicar (auth tokens rotados).
+
+Rollback
+- Mantener politicas de retiros y facilidad para pinear consumers a versiones anteriores.

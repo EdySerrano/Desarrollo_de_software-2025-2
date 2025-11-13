@@ -1,0 +1,15 @@
+Ejercicio 4 — Riesgos y anti-patrones al abusar de la inyección de dependencias en Terraform
+
+Riesgos principales
+- Over-inyección: pasar estructuras JSON muy grandes en triggers puede provocar recreaciones
+  frecuentes y diffs ruidosos en el estado. Mantén triggers estables y con claves predecibles.
+- Exposición excesiva: exponer detalles internos (nombres de recursos, IDs efímeros) en outputs
+  puede atar consumidores a implementaciones internas.
+- Complejidad oculta: inyectar lógica de negocio (transformaciones) en adapters o scripts puede
+  esconder errores y dispersar responsabilidades.
+
+Mitigaciones
+- Documentar y restringir contratos: definir tipos y límites de campos.
+- Versionar outputs y emplear semver: introducir cambios no rompedores en minor versions.
+- Validaciones en CI: validar estructuras JSON y límites antes de publicar.
+- Preferir outputs explícitos y pequeños en vez de dumps JSON gigantes.

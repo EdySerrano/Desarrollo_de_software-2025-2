@@ -1,0 +1,20 @@
+Patrones: Facade vs Adapter vs Mediator, acoplamiento y reutilización
+
+Facade
+- Propósito: ofrecer una interfaz simplificada y estable a un subsistema complejo.
+- Acoplamiento: reduce el acoplamiento del consumidor; el consumidor depende de la fachada
+  (contrato público) en lugar de componentes internos.
+- Reutilización: alta para consumidores porque usan operaciones de alto nivel; facilita
+  reusar funcionalidades sin conocer la implementación.
+
+Adapter
+- Propósito: traducir entre interfaces incompatibles.
+- Acoplamiento: desacopla un consumidor de implementaciones concretas; el consumidor sigue
+  usando su API esperada y el adapter hace la transformación.
+- Reutilización: permite reutilizar módulos existentes en entornos distintos sin cambiar consumidores.
+
+Mediator
+- Propósito: centralizar la comunicación y las reglas entre múltiples componentes.
+- Acoplamiento: rompe dependencias puntuales entre componentes (nadie conoce a nadie salvo al mediador).
+- Reutilización: facilita cambiar interacciones internas sin tocar componentes, pero puede consolidar
+  lógica que dificulte la reutilización si se convierte en un "god object".

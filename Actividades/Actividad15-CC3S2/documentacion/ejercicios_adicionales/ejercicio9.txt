@@ -1,0 +1,18 @@
+Ejercicio 9 — Terraform Cloud Registry vs repositorio Git interno
+
+Terraform Cloud Registry (TCR)
+- Ventajas:
+  - Integracion nativa con Terraform Cloud/Terraform Enterprise.
+  - UI, busquedas, versionado y acceso controlado listo.
+  - Facilidad de descubrimiento y gestion.
+- Desventajas:
+  - Coste y dependencia de un servicio externo.
+  - Restricciones políticas corporativas pueden limitar su uso.
+
+Repositorio Git interno
+- Ventajas:
+  - Control total, posible integracion con Artifactory/Git server.
+  - Flexibilidad para publicar artefactos y politicas de acceso.
+- Desventajas:
+  - Requiere más trabajo (scripts, packaging, indexado) para emular features de registry.
+  - Menos discoverability si no hay UI/registro central.

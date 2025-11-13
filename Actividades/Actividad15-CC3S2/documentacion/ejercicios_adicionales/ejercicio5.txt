@@ -1,0 +1,25 @@
+Ejercicio 5 — Monorepositorio vs Multirepositorio para módulos IaC
+
+Criterios de comparación
+- Escalabilidad del equipo
+- Gobernanza y permisos
+- Velocidad de despliegue y CI
+- Descubrimiento y reutilización de módulos
+
+Monorepo — ventajas
+- Visibilidad: todo el código en un sitio facilita refactorings cross-cutting.
+- Consistencia: políticas y linters centralizados.
+- Reutilización simple: referencias directas al código.
+
+Monorepo — desventajas
+- Escalado: gran tamaño y CI lento si no hay optimización por paths.
+- Blast radius: un mal cambio puede impactar múltiples módulos.
+
+Multirepo — ventajas
+- Aislamiento: permisos y fallos aislados por proyecto.
+- Autonomía: equipos liberan según su propio ritmo.
+- CI ligero por repo.
+
+Multirepo — desventajas
+- Fricción: cambios cross-cutting requieren coordinación y version bumps.
+- Descubrimiento: mayor riesgo de duplicación si no hay buen registry.

@@ -1,0 +1,23 @@
+Ejercicio 3 — Inversión de Control e Inversión de Dependencias en IaC
+
+Por qué ayudan?:
+- Inversión de Control (IoC): los módulos no buscan o crean sus dependencias, las reciben desde afuera
+  (outputs, inyección). Esto permite:
+  - Testabilidad: mockear inputs/outputs y probar módulos aislados.
+  - Desacoplamiento: cambios internos en proveedores no afectan a consumidores si el contrato se mantiene.
+
+- Inversión de Dependencias (DIP): los módulos de alto nivel dependen de abstracciones (contratos/outputs)
+  no de implementaciones concretas. Esto permite:
+  - Reemplazo de implementaciones sin cambiar consumidores.
+  - Evolución controlada mediante versionado de los contratos.
+
+Comparación con relaciones unidireccionales simples
+- Relaciones unidireccionales (red escribe outputs, servidor los lee) ya son un paso hacia IoC, pero IoC/DIP
+  implica definir claramente abstracciones y contratos, no solo pasar archivos.
+- Mejora mantenibilidad porque las dependencias se gestionan en un punto (facade/adapters/DI container) y
+  los cambios se prueban/validan contra los contratos.
+
+Buenas practicas
+- Documentar outputs y sus tipos.
+- Versionar contratos (introducir nuevos outputs en minor versions).
+- Validar inputs en tiempo de generación (scripts/CI) para evitar rupturas en runtime.

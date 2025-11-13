@@ -1,0 +1,45 @@
+Ejemplo de releases (Fase 8) - Versionado y liberacion
+
+Este archivo muestra ejemplos de releases con al menos dos versiones por módulo.
+
+Módulo: network
+- v1.0.0 — Initial release
+  - Añade recurso `null_resource.network` y escritura de `network_outputs.json`.
+  - Tests: creación básica del recurso.
+- v1.1.0 — Minor: expose cidr output
+  - Añade salida `cidr` y documentación de uso.
+  - Motivo: nueva funcionalidad no rompiente (minor).
+
+Módulo: server
+- v1.0.0 — Initial release
+  - Genera `server.tf.json` leyendo `network_outputs.json`.
+  - IP allocation básica y `null_resource.server`.
+- v1.1.0 — Patch: fix IP allocation edge-case
+  - Corrige cálculo de la quinta IP en subredes pequeñas.
+  - Motivo: bugfix (patch).
+
+Módulo: facade
+- v0.1.0 — Initial release
+  - Facade que expone `bucket_name`, `endpoint` y `network_id`.
+- v0.2.0 — Minor: añade `region` output
+  - Nuevo output `region`.
+
+Ejemplo de changelog compacto (por versión)
+- v1.1.0 (server)
+  - Fix: arreglo en la función de asignación de IPs.
+  - Test: añadir caso para subredes /30.
+
+- v1.0.0 (network)
+  - Initial: recursos null/local, export de outputs a archivo JSON.
+
+Notas sobre versionado
+- Usar SemVer: MAJOR.MINOR.PATCH
+  - MAJOR: cambios incompatibles
+  - MINOR: nuevas funcionalidades sin romper API
+  - PATCH: correcciones y mejoras menores
+
+Cómo crear tags manualmente
+  git tag -a v1.1.0 -m "Release v1.1.0: Fix IP allocation"
+  git push --tags
+
+Fin del ejemplo.

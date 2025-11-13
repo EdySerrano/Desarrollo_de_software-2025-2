@@ -1,0 +1,16 @@
+Ejercicio 7 — Justificación del versionado semántico (SemVer) en módulos Terraform
+
+Por qué SemVer?:
+- Claridad: consumidores entienden el impacto de actualizar (MAJOR rompe compatibilidad, MINOR nuevas features, PATCH fixes).
+- Automatización: pipelines pueden aplicar reglas (aceptar rangos ~>1.2 para compatibilidad).
+- Seguridad y gobernanza: facilita revisiones y rollbacks.
+
+Consecuencias de omitir SemVer
+- Actualizaciones inesperadas rompen infraestructuras en producción.
+- Dificultad para coordinar dependencias y para realizar rollbacks.
+- Mayor fricción en adopción de nuevas versiones por consumidores temerosos.
+
+Buenas prácticas
+- Documentar breaking changes en los changelogs.
+- Mantener compatibilidad hacia atrás para MINOR cuando sea posible.
+- Automate version bumps with CI and conventional commits if posible.

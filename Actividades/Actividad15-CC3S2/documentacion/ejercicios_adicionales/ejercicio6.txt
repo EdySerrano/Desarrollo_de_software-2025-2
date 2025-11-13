@@ -1,0 +1,16 @@
+Ejercicio 6 — Flujo de trabajo Git (ramas, tags, PRs) para monorepo y multirepo
+
+Monorepo
+- Ramas: `main` (producción), `develop` (opcional), `feature/*` para cambios.
+- PRs por feature: incluir cambios y tests para módulos afectados.
+- CI: al abrir PR ejecutar tests solo para módulos afectados (changed-files). Merge cuando CI verde y revisiones OK.
+- Versionado: tag por release por módulo con convención `module-name/vX.Y.Z` o publicar artifacts.
+
+Multirepo
+- Ramas: cada repo con `main` y `feature/*`.
+- PRs: PRs normales; cambios cross-cutting -> crear PRs en repos dependientes y coordinar con integración.
+- CI: pipeline propio por repo; publicar paquete/tag tras merge a `main`.
+
+Gestión de versiones compartidas
+- Para cambios que afectan varias piezas, usar documento de coordinación (release train) o script que
+  cree PRs encadenados y realice bump de versiones.

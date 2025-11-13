@@ -1,0 +1,27 @@
+Ejercicio 14 — Estrategia de migración entre versiones del módulo (breaking changes)
+
+Principios
+- Seguir SemVer: cambios incompatibles => major bump (v1 → v2). Agregar/ajustar campos sin romper contratos => minor/patch.
+- Minimizar el blast radius: evitar romper consumidores actuales sin avisar.
+
+Pasos de migración
+1. Identificar breaking changes
+   - Revisión de inputs/outputs expuestos por el módulo. Documentar qué cambia y por qué.
+
+2. Proveer compatibilidad hacia atrás
+   - Crear un wrapper (compat) que acepte la interfaz antigua y la traduzca a la nueva.
+   - Ejemplo: si `server_type` se renombra a `instance_profile`, aceptar `server_type` y mapear a `instance_profile` internamente con una advertencia en logs/outputs.
+
+3. Documentación y release notes
+   - En la release major explicar exactamente los pasos que debe seguir el consumidor.
+   - Incluir ejemplos de migración (antes/después) en README.
+
+4. Deprecación gradual
+   - En la versión v1.x, introducir `deprecated_server_type` como alias que emite una advertencia en outputs.
+   - En la siguiente major, eliminar el alias.
+
+5. Pruebas y validación
+   - Tests de integración que desplieguen la interfaz vieja usando el wrapper y verifiquen que la infra se crea correctamente.
+
+6. Plan de roll-back
+   - Mantener tag de la release anterior hasta comprobar consumidores; documentar cómo volver a la versión previa (git checkout + terraform init -upgrade con la versión anterior).

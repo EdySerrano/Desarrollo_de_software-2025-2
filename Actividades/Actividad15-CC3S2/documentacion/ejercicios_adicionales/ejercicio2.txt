@@ -1,0 +1,25 @@
+Ejercicio 2 Escenario real: despliegue multi-cloud y elección de patrones
+
+Escenario
+- Organización desplegando una aplicación en GCP y AWS. Requisitos:
+  - Red interconectada (VPC/VPC peers), servidores (VMs/instances), seguridad (firewalls/SGs), y balanceo.
+  - Consumidores (equipos de plataforma y aplicaciones) deben depender de contratos estables.
+
+Patrones recomendados
+- Adapter por proveedor: cada cloud tiene un módulo (module/aws_network, module/gcp_network) que normaliza
+  sus outputs a un contrato común (network_id, cidr, region, subnet_name). Esto reduce fricción para consumidores.
+- Facade: un módulo facade que consume los adapters y publica outputs estables (endpoint, network_id, monitoring_endpoint).
+  Los equipos consumidores usan sólo el facade.
+- Mediator (opcional): si la orquestación entre clouds implica lógica (failover, sincronización de rutas, backup),
+  usar un mediador (script o servicio) que coordine acciones entre módulos y produzca la configuración final.
+
+Ventajas e inconvenientes
+- Adapter
+  - +: aislamiento de vendor-specific, migraciones más simples.
+  - -: overhead de mantener mappers por proveedor.
+- Facade
+  - +: interfaz única, menos cambios para consumidores.
+  - -: centraliza responsabilidad; requiere versionado y coordinación.
+- Mediator
+  - +: orquestación compleja posible sin tocar módulos individuales.
+  - -: complejidad y necesidad de tests; potencial "god object".
