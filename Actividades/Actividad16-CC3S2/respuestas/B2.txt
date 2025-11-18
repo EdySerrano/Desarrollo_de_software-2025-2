@@ -1,0 +1,37 @@
+1) ¿Qué dependencias/proveedores aparecen listadas?
+
+En el SBOM generado (`./.evidence/sbom.json`) aparecen principalmente artefactos y dependencias de Python relacionados con el entorno virtual y los requisitos del proyecto. Ejemplos claros extraídos del SBOM:
+- Paquetes listados en `requirements.txt`: `PyYAML`, `pytest` (y `python-dotenv` fue añadido antes). 
+- Muchos archivos como `pytest`, `pip`, `setuptools`, `iniconfig`, `packaging`, `pluggy`, y paquetes vendorizados por `pip`.
+- Artefactos del repositorio: `requirements.txt`, `Makefile`, `Instrucciones.md`, y el propio plan `./.evidence/plan.json` (cada archivo listado con su `sha256`).
+
+2) ¿Por qué guardar este archivo con hash y firma ayuda a demostrar procedencia y a cumplir con niveles SLSA (integridad del artefacto)?
+
+- Hash (SHA-256) por archivo: asegura integridad de cada artefacto. Si alguien modifica un fichero su hash cambiará; comparar el hash esperado con el calculado detecta alteraciones.
+- Firma del SBOM/attestacion: firmar el SBOM o la lista de hashes (con la clave del proceso de construcción o el CI) proporciona una prueba de origen (provenance) y no repudio: demuestra que el SBOM fue emitido por el proceso/identidad esperada.
+- Vinculación entre build + SBOM: un SBOM firmado, junto con metadatos del build es una atestacion de SLSA que permite reconstruir y verificar la cadena de suministro.
+- Requisitos SLSA (integridad y procedencia): niveles de SLSA requieren trazabilidad y artefactos inmutables firmados. Hashes + firmas permiten verificar que el artefacto que se desplego es exactamente el que aprobo la pipeline y que provino del origen declarado.
+
+3) ¿Cómo usarías esto para decirle a un auditor: "no estamos bajando providers random de internet, todo viene de un mirror interno controlado"?
+
+Propuesta práctica y verificable:
+
+- 1) Manten en el SBOM/attestation los metadatos del origen: incluye en la atestación campos que indiquen la URL del mirror usado, el `pip.conf`/`pip` options o `pipenv`/`poetry` config que fuerza el mirror.
+
+- 2) Firma la SBOM y/o la attestation en la pipeline: la CI (con clave privada del builder) firma el SBOM final. Entrega al auditor tanto el SBOM firmado como la clave publica del signer o ubicacion de la autoridad que la emite.
+
+- 3) Proporciona evidencia de la politica de descarga: configura y archiva el `pip.conf`/`~/.pip/pip.conf` usado en CI, configuracion que fuerza el mirror. Adjunta logs de la ejecución de la pipeline que muestran las URLs contactadas.
+
+- 4) Comprueba hashes contra el mirror: obtiene las copias suministradas por el mirror (o su índice) y demuestra que los hashes de los artefactos que descargo la build coinciden con los del SBOM. Esto prueba que los artefactos provienen del mirror exacto y no de otro origen.
+
+- 5) Auditoría de red/infra: muestra reglas de salida (firewall/NAT) o política de egress que impidan descargas directas a Internet desde los runners/builders, y registros de proxy que muestren que las descargas pasan por el mirror interno.
+
+- 6) Políticas de bloqueo y whitelisting: si aplicas control en la organización, incluye la politica y evidencia de su aplicacion.
+
+- 7) Presenta la atestacion completa: SBOM con hashes + firma, logs de CI con URL del mirror, configuracion de gestor de paquetes (pip/terraform), y reglas de red.
+
+Con esto el auditor puede re-verificar:
+- que los hashes del SBOM coinciden con los artefactos entregados;
+- que los artefactos provienen del mirror indicado;
+- que la atestación fue emitida por la pipeline/entidad correcta (firma publica valida);
+- y que políticas de red/pipeline previenen descargas directas desde internet.

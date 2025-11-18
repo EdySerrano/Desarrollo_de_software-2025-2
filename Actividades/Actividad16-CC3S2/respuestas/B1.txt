@@ -1,0 +1,26 @@
+¿La política bloquea algo inseguro? Por ejemplo, ¿bloquearía exponer un bucket público o imprimir un secreto en un output? Explica con tus palabras el tipo de chequeo que viste.
+
+Si, hay dos reglas principales en `policies/` que detectan y rechazan prácticas inseguras:
+
+- `no_public.rego`: esta regla revisa los recursos en `input.creates` y `input.updates` y niega (produce un `deny`) cuando un bucket se está marcando 
+como `public == true` o cuando una actualización cambia `public` a `true`. En palabras sencillas, bloquea la creación o la modificación que haga que un bucket sea público. 
+Mensajes de ejemplo: "Bucket <name> no puede ser público" o "Update pone público el bucket <name>".
+
+- `no_secret_outputs.rego`: esta regla examina los `input.outputs` y busca, mediante una expresión regular insensible a mayúsculas, 
+laves que contengan palabras como "key", "secret", "token" o "password". Si encuentra un output cuyo nombre o valor coincide con esos términos,
+ genera un `deny` indicando que el output revela un posible secreto. En otras palabras, evita que se exporten outputs que parezcan contener secretos.
+
+Tipo de chequeo: ambas reglas son chequeos estáticos basados en las propiedades del plan (el JSON de entrada). No ejecutan el código, 
+sino que inspeccionan la estructura del plan generado: los recursos que se crearán o actualizarán y los valores de los outputs. Aplican condiciones sencillas 
+(comparación booleana y búsqueda por patrón) para identificar configuraciones inseguras.
+
+
+¿Qué pasaría si intentas "forzar" algo inseguro en main.tf y vuelves a correr make policy?
+
+Si en `main.tf` alteras la configuración para forzar algo inseguro —por ejemplo, defines un bucket con `public = true` o agregas un output llamado `db_password` o `secret_token` que contenga un valor sensible— el flujo sería:
+
+1. Ejecutas `make plan` (el flujo que genera `./.evidence/plan.json`). Eso produce un plan JSON que incluye los cambios deseados: recursos a crear/actualizar y outputs.
+2. Ejecutas `make policy`. El `Makefile` invocará `opa eval -i ./.evidence/plan.json -d policies 'data.local.plan.deny'`. OPA evaluará las reglas en `policies/` contra el JSON del plan.
+3. Si alguna de las condiciones de las reglas coincide con lo que pusiste en `main.tf`, OPA devolverá uno o más mensajes `deny`. 
+El `Makefile` captura el código de salida (`RC`) de OPA y lo devuelve como resultado del objetivo `policy`, 
+por lo que el comando `make policy` fallará (salida diferente de 0) y verás los mensajes de rechazo.

@@ -1,0 +1,13 @@
+Piezas mínimas de evidencia :
+
+Antes de aplicar en producción se debe adjuntar evidencia verificable que permita a un revisor comprobar integridad y procedencia: el `plan` generado 
+y firmado (por ejemplo `./.evidence/plan.json` y su firma), el SBOM con hashes (`./.evidence/sbom.json`) que liste los artefactos y sus `sha256`, 
+el informe del escaneo de secretos que muestre cero hallazgos o los issues detectados, la salida del policy gate (OPA) indicando PASS o los `deny` encontrados, 
+y el tag semántico exacto del módulo que se va a desplegar (p. ej. `v1.2.0`). Además se debe incluir un resumen del commit/CI job (commit hash, job id, timestamp) y 
+un plan de ejecución y rollback breve.
+
+RACI:
+
+El "Responsable" debería ser el Ingeniero de DevOps/Release que prepara el despliegue y ejecuta las acciones (genera y firma el plan, corre los checks, ejecuta `apply` 
+y valida el resultado). El "Accountable" debería ser el Owner del servicio o el Platform Manager que da la aprobación final y asume la responsabilidad formal por el resultado
+ y por aceptar el riesgo residual; esta persona firma o aprueba el ticket antes de la ejecución. En paralelo, Security y SRE son consultados y Product/Support informados.
