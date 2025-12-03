@@ -1,0 +1,6 @@
+airflow-scheduler-1  | 
+webserver /health: 000
+webserver /health: 000
+]633;E;echo "[MARCA] DAG cargado: etl_pipeline";18066323-1bf8-46d5-a5ab-05840c3c1ce1]633;C[MARCA] DAG cargado: etl_pipeline
+[MARCA] webserver /health: 200
+[MARCA] Scheduler heartbeat detectado

@@ -1,0 +1,12 @@
+dag_id            | fileloc                      | owners    | is_paused
+==================+==============================+===========+==========
+etl_pipeline_demo | /opt/airflow/dags/etl_dag.py | devsecops | True     
+                                                                        
+[[34m2025-12-03T17:05:00.229+0000[0m] {[34m__init__.py:[0m43} INFO[0m - Loaded API auth backend: airflow.api.auth.backend.session[0m
+     |                   |                      |                      |                     |          |                  | last_scheduling_deci |                     |          |            |       
+conf | dag_id            | dag_run_id           | data_interval_start  | data_interval_end   | end_date | external_trigger | sion                 | logical_date        | run_type | start_date | state 
+=====+===================+======================+======================+=====================+==========+==================+======================+=====================+==========+============+=======
+{}   | etl_pipeline_demo | manual__2025-12-03T1 | 2025-12-02           | 2025-12-03          | None     | True             | None                 | 2025-12-03          | manual   | None       | queued
+     |                   | 7:05:00+00:00        | 00:00:00+00:00       | 00:00:00+00:00      |          |                  |                      | 17:05:00+00:00      |          |            |       
+                                                                                                                                                                                                        
+<Task(PythonOperator): run_etl>

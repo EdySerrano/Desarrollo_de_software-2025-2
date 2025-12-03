@@ -1,0 +1,5 @@
+laboratorio9-airflow-scheduler-1 
+"no-healthcheck"
+laboratorio9-airflow-webserver-1 
+"no-healthcheck"
+laboratorio9-postgres-1 "healthy"

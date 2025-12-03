@@ -1,0 +1,121 @@
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.04kB done
+#1 DONE 0.0s
+
+#2 [airflow-webserver internal] load build definition from Dockerfile
+#2 transferring dockerfile: 606B done
+#2 DONE 0.0s
+
+#3 [etl-app internal] load build definition from Dockerfile
+#3 transferring dockerfile: 1.06kB done
+#3 DONE 0.0s
+
+#4 [etl-app internal] load metadata for docker.io/library/python:3.12-slim
+#4 ...
+
+#5 [auth] apache/airflow:pull token for registry-1.docker.io
+#5 DONE 0.0s
+
+#6 [auth] library/python:pull token for registry-1.docker.io
+#6 DONE 0.0s
+
+#7 [airflow-webserver internal] load metadata for docker.io/apache/airflow:2.9.1-python3.11
+#7 DONE 1.2s
+
+#4 [etl-app internal] load metadata for docker.io/library/python:3.12-slim
+#4 ...
+
+#8 [airflow-webserver internal] load .dockerignore
+#8 transferring context: 2B done
+#8 DONE 0.0s
+
+#9 [airflow-webserver 1/4] FROM docker.io/apache/airflow:2.9.1-python3.11@sha256:1553c44823e2787dc1e78d50c39c147792b381adb45d2044d383051d35c8b5c0
+#9 resolve docker.io/apache/airflow:2.9.1-python3.11@sha256:1553c44823e2787dc1e78d50c39c147792b381adb45d2044d383051d35c8b5c0 0.0s done
+#9 DONE 0.1s
+
+#10 [airflow-webserver internal] load build context
+#10 transferring context: 5.17kB done
+#10 DONE 0.0s
+
+#11 [airflow-webserver 2/4] COPY airflow/dags /opt/airflow/dags
+#11 CACHED
+
+#12 [airflow-webserver 3/4] COPY app          /opt/airflow/app
+#12 CACHED
+
+#13 [airflow-webserver 4/4] RUN pip install --no-cache-dir     --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.9.1/constraints-3.11.txt"     pandas psycopg2-binary
+#13 CACHED
+
+#4 [etl-app internal] load metadata for docker.io/library/python:3.12-slim
+#4 DONE 1.4s
+
+#14 [etl-app internal] load .dockerignore
+#14 transferring context: 2B done
+#14 DONE 0.0s
+
+#15 [etl-app internal] load build context
+#15 transferring context: 2.76kB done
+#15 DONE 0.0s
+
+#16 [airflow-webserver] exporting to image
+#16 exporting layers 0.0s done
+#16 exporting manifest sha256:23a7829333f1c4d1d62ad9c6bd4943b04fdcb1a4051e98f0f272365da41589d1 done
+#16 exporting config sha256:09426e770b20b91865c9389db48a3ee987c1857e5c478d59d2a0a27d18fe0356 done
+#16 exporting attestation manifest sha256:5fa55acd4c921fe12b4b6b630539edc9b7e4aa770a311fa98361b600f07e8453 0.0s done
+#16 exporting manifest list sha256:afadfa039dc89bc462f9c238d77882cacfcc0607935b817313524a3b2cc24693 0.0s done
+#16 naming to docker.io/library/airflow-secure:1.0.0 done
+#16 unpacking to docker.io/library/airflow-secure:1.0.0
+#16 ...
+
+#17 [etl-app builder 1/4] FROM docker.io/library/python:3.12-slim@sha256:b43ff04d5df04ad5cabb80890b7ef74e8410e3395b19af970dcd52d7a4bff921
+#17 resolve docker.io/library/python:3.12-slim@sha256:b43ff04d5df04ad5cabb80890b7ef74e8410e3395b19af970dcd52d7a4bff921 0.0s done
+#17 DONE 0.0s
+
+#18 [etl-app runtime 3/7] WORKDIR /app
+#18 CACHED
+
+#19 [etl-app builder 4/4] RUN apt-get update  && apt-get install -y --no-install-recommends build-essential gcc  && pip install --upgrade pip  && python -m venv /venv  && . /venv/bin/activate  && pip install -r requirements.txt  && apt-get purge -y build-essential gcc  && apt-get autoremove -y  && rm -rf /var/lib/apt/lists/*
+#19 CACHED
+
+#20 [etl-app runtime 4/7] COPY --from=builder /venv /venv
+#20 CACHED
+
+#21 [etl-app builder 2/4] WORKDIR /build
+#21 CACHED
+
+#22 [etl-app builder 3/4] COPY requirements.txt .
+#22 CACHED
+
+#23 [etl-app runtime 6/7] COPY healthcheck.py ./healthcheck.py
+#23 CACHED
+
+#24 [etl-app runtime 5/7] COPY pipeline.py ./pipeline.py
+#24 CACHED
+
+#25 [etl-app runtime 2/7] RUN useradd --create-home --uid 10001 etluser
+#25 CACHED
+
+#26 [etl-app runtime 7/7] COPY data ./data
+#26 CACHED
+
+#16 [airflow-webserver] exporting to image
+#16 unpacking to docker.io/library/airflow-secure:1.0.0 0.0s done
+#16 DONE 0.2s
+
+#27 [etl-app] exporting to image
+#27 exporting layers done
+#27 exporting manifest sha256:8fc99812371198ee0bc4f9951683e1f1a567ba823393532fd36a04c71ccda4e0 done
+#27 exporting config sha256:fc295a4d77d96b68765c22110b05aee88baff162866b4672222da1ba3c25947e done
+#27 exporting attestation manifest sha256:b7a0c7fb95b46d3b67bc91c63ca514aa163704bd7b4a5a459362e21349b042c0 0.0s done
+#27 exporting manifest list sha256:30411e0b3fb3db48bee11a12442f55af24f0c2f36f66c144b022a3a8a4d32bc1 0.0s done
+#27 naming to docker.io/library/etl-app:1.0.0 done
+#27 unpacking to docker.io/library/etl-app:1.0.0 0.0s done
+#27 DONE 0.2s
+
+#28 [airflow-webserver] resolving provenance for metadata file
+#28 DONE 0.0s
+
+#29 [etl-app] resolving provenance for metadata file
+#29 DONE 0.0s
+ airflow-secure:1.0.0  Built
+ etl-app:1.0.0  Built

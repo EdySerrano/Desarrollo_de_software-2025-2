@@ -1,0 +1,24 @@
+NAME                               IMAGE                  COMMAND                  SERVICE             CREATED          STATUS                    PORTS
+laboratorio9-airflow-scheduler-1   airflow-secure:1.0.0   "/usr/bin/dumb-init …"   airflow-scheduler   33 seconds ago   Up 23 seconds             8080/tcp
+laboratorio9-airflow-webserver-1   airflow-secure:1.0.0   "/usr/bin/dumb-init …"   airflow-webserver   33 seconds ago   Up 23 seconds             0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+laboratorio9-postgres-1            postgres:13            "docker-entrypoint.s…"   postgres            33 seconds ago   Up 32 seconds (healthy)   5432/tcp
+NAMES                              IMAGE                  STATUS                    PORTS
+laboratorio9-airflow-webserver-1   airflow-secure:1.0.0   Up 31 seconds             0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+laboratorio9-airflow-scheduler-1   airflow-secure:1.0.0   Up 31 seconds             8080/tcp
+laboratorio9-postgres-1            postgres:13            Up 39 seconds (healthy)   5432/tcp
+
+ laboratorio9-airflow-scheduler-1 
+
+
+ laboratorio9-airflow-webserver-1 
+
+
+ laboratorio9-postgres-1 
+21:            "Health": {
+22-                "Status": "healthy",
+23-                "FailingStreak": 0,
+NAME                               IMAGE                  COMMAND                  SERVICE             CREATED         STATUS                   PORTS
+laboratorio9-airflow-init-1        airflow-secure:1.0.0   "bash -lc airflow db…"   airflow-init        7 seconds ago   Up 3 seconds             8080/tcp
+laboratorio9-airflow-scheduler-1   airflow-secure:1.0.0   "/usr/bin/dumb-init …"   airflow-scheduler   6 seconds ago   Up 3 seconds             8080/tcp
+laboratorio9-airflow-webserver-1   airflow-secure:1.0.0   "/usr/bin/dumb-init …"   airflow-webserver   6 seconds ago   Up 3 seconds             0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+laboratorio9-postgres-1            postgres:13            "docker-entrypoint.s…"   postgres            2 minutes ago   Up 2 minutes (healthy)   5432/tcp

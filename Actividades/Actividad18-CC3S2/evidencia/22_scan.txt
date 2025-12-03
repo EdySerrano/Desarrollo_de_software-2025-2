@@ -1,0 +1,50 @@
+NAME           INSTALLED                FIXED IN     TYPE    VULNERABILITY        SEVERITY    EPSS           RISK   
+login.defs     1:4.17.4-2               (won't fix)  deb     CVE-2024-56433       Low         5.1% (89th)    1.7    
+passwd         1:4.17.4-2               (won't fix)  deb     CVE-2024-56433       Low         5.1% (89th)    1.7    
+libc-bin       2.41-12                               deb     CVE-2018-20796       Negligible  1.8% (82nd)    < 0.1  
+libc6          2.41-12                               deb     CVE-2018-20796       Negligible  1.8% (82nd)    < 0.1  
+tar            1.35+dfsg-3.1                         deb     CVE-2005-2541        Negligible  1.5% (80th)    < 0.1  
+apt            3.0.3                                 deb     CVE-2011-3374        Negligible  1.5% (80th)    < 0.1  
+libapt-pkg7.0  3.0.3                                 deb     CVE-2011-3374        Negligible  1.5% (80th)    < 0.1  
+libc-bin       2.41-12                               deb     CVE-2019-1010023     Negligible  0.7% (71st)    < 0.1  
+libc6          2.41-12                               deb     CVE-2019-1010023     Negligible  0.7% (71st)    < 0.1  
+libsqlite3-0   3.46.1-7                 (won't fix)  deb     CVE-2025-7709        Medium      < 0.1% (18th)  < 0.1  
+libc-bin       2.41-12                               deb     CVE-2010-4756        Negligible  0.5% (66th)    < 0.1  
+libc6          2.41-12                               deb     CVE-2010-4756        Negligible  0.5% (66th)    < 0.1  
+libc-bin       2.41-12                               deb     CVE-2019-1010024     Negligible  0.4% (58th)    < 0.1  
+libc6          2.41-12                               deb     CVE-2019-1010024     Negligible  0.4% (58th)    < 0.1  
+libc-bin       2.41-12                               deb     CVE-2019-9192        Negligible  0.4% (57th)    < 0.1  
+libc6          2.41-12                               deb     CVE-2019-9192        Negligible  0.4% (57th)    < 0.1  
+libsqlite3-0   3.46.1-7                              deb     CVE-2021-45346       Negligible  0.2% (47th)    < 0.1  
+libc-bin       2.41-12                               deb     CVE-2019-1010025     Negligible  0.2% (45th)    < 0.1  
+libc6          2.41-12                               deb     CVE-2019-1010025     Negligible  0.2% (45th)    < 0.1  
+login.defs     1:4.17.4-2                            deb     CVE-2007-5686        Negligible  0.2% (42nd)    < 0.1  
+passwd         1:4.17.4-2                            deb     CVE-2007-5686        Negligible  0.2% (42nd)    < 0.1  
+pip            25.0.1                   25.3         python  GHSA-4xh5-x5gv-qwph  Medium      < 0.1% (4th)   < 0.1  
+perl-base      5.40.1-6                              deb     CVE-2011-4116        Negligible  0.2% (42nd)    < 0.1  
+libc-bin       2.41-12                               deb     CVE-2019-1010022     Negligible  0.1% (35th)    < 0.1  
+libc6          2.41-12                               deb     CVE-2019-1010022     Negligible  0.1% (35th)    < 0.1  
+libsystemd0    257.9-1~deb13u1                       deb     CVE-2023-31437       Negligible  0.1% (32nd)    < 0.1  
+libudev1       257.9-1~deb13u1                       deb     CVE-2023-31437       Negligible  0.1% (32nd)    < 0.1  
+libncursesw6   6.5+20250216-2           (won't fix)  deb     CVE-2025-6141        Low         < 0.1% (2nd)   < 0.1  
+libtinfo6      6.5+20250216-2           (won't fix)  deb     CVE-2025-6141        Low         < 0.1% (2nd)   < 0.1  
+ncurses-base   6.5+20250216-2           (won't fix)  deb     CVE-2025-6141        Low         < 0.1% (2nd)   < 0.1  
+ncurses-bin    6.5+20250216-2           (won't fix)  deb     CVE-2025-6141        Low         < 0.1% (2nd)   < 0.1  
+libsystemd0    257.9-1~deb13u1                       deb     CVE-2023-31438       Negligible  0.1% (28th)    < 0.1  
+libudev1       257.9-1~deb13u1                       deb     CVE-2023-31438       Negligible  0.1% (28th)    < 0.1  
+libsystemd0    257.9-1~deb13u1                       deb     CVE-2023-31439       Negligible  < 0.1% (26th)  < 0.1  
+libudev1       257.9-1~deb13u1                       deb     CVE-2023-31439       Negligible  < 0.1% (26th)  < 0.1  
+python         3.12.12                  3.15.0       binary  CVE-2025-6075        Low         < 0.1% (3rd)   < 0.1  
+libsystemd0    257.9-1~deb13u1                       deb     CVE-2013-4392        Negligible  < 0.1% (17th)  < 0.1  
+libudev1       257.9-1~deb13u1                       deb     CVE-2013-4392        Negligible  < 0.1% (17th)  < 0.1  
+coreutils      9.7-3                                 deb     CVE-2017-18018       Negligible  < 0.1% (17th)  < 0.1  
+bsdutils       1:2.41-5                              deb     CVE-2022-0563        Negligible  < 0.1% (4th)   < 0.1  
+libblkid1      2.41-5                                deb     CVE-2022-0563        Negligible  < 0.1% (4th)   < 0.1  
+liblastlog2-2  2.41-5                                deb     CVE-2022-0563        Negligible  < 0.1% (4th)   < 0.1  
+libmount1      2.41-5                                deb     CVE-2022-0563        Negligible  < 0.1% (4th)   < 0.1  
+libsmartcols1  2.41-5                                deb     CVE-2022-0563        Negligible  < 0.1% (4th)   < 0.1  
+libuuid1       2.41-5                                deb     CVE-2022-0563        Negligible  < 0.1% (4th)   < 0.1  
+login          1:4.16.0-2+really2.41-5               deb     CVE-2022-0563        Negligible  < 0.1% (4th)   < 0.1  
+mount          2.41-5                                deb     CVE-2022-0563        Negligible  < 0.1% (4th)   < 0.1  
+util-linux     2.41-5                                deb     CVE-2022-0563        Negligible  < 0.1% (4th)   < 0.1  
+coreutils      9.7-3                                 deb     CVE-2025-5278        Negligible  < 0.1% (2nd)   < 0.1

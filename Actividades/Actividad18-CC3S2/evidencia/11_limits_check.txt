@@ -1,0 +1,5 @@
+airflow-webserver (afffb33a20faccba323f60d61a77559c7cb4f3eab6b9e9b9884da787d8270cf3)
+Memory=536870912 Bytes  NanoCpus=1000000000  CpuQuota=0  CpuPeriod=0
+postgres (f8deb864320e66a3a9401845da79e17c01bb8abfa9343cbaff9a7572fc22a0cf)
+Memory=536870912 Bytes  NanoCpus=500000000  CpuQuota=0  CpuPeriod=0
+etl-app ()

@@ -1,0 +1,98 @@
+time="2025-12-03T11:24:53-05:00" level=warning msg="/home/edy/Curso-CC3S2/labs/Laboratorio9/docker-compose.test.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+#1 [internal] load local bake definitions
+#1 reading from stdin 533B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 1.06kB done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.12-slim
+#3 ...
+
+#4 [auth] library/python:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.12-slim
+#3 DONE 1.1s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 159B done
+#6 DONE 0.0s
+
+#7 [builder 1/4] FROM docker.io/library/python:3.12-slim@sha256:b43ff04d5df04ad5cabb80890b7ef74e8410e3395b19af970dcd52d7a4bff921
+#7 resolve docker.io/library/python:3.12-slim@sha256:b43ff04d5df04ad5cabb80890b7ef74e8410e3395b19af970dcd52d7a4bff921 0.0s done
+#7 DONE 0.0s
+
+#8 [runtime 3/7] WORKDIR /app
+#8 CACHED
+
+#9 [builder 2/4] WORKDIR /build
+#9 CACHED
+
+#10 [builder 4/4] RUN apt-get update  && apt-get install -y --no-install-recommends build-essential gcc  && pip install --upgrade pip  && python -m venv /venv  && . /venv/bin/activate  && pip install -r requirements.txt  && apt-get purge -y build-essential gcc  && apt-get autoremove -y  && rm -rf /var/lib/apt/lists/*
+#10 CACHED
+
+#11 [runtime 4/7] COPY --from=builder /venv /venv
+#11 CACHED
+
+#12 [runtime 2/7] RUN useradd --create-home --uid 10001 etluser
+#12 CACHED
+
+#13 [builder 3/4] COPY requirements.txt .
+#13 CACHED
+
+#14 [runtime 5/7] COPY pipeline.py ./pipeline.py
+#14 CACHED
+
+#15 [runtime 6/7] COPY healthcheck.py ./healthcheck.py
+#15 CACHED
+
+#16 [runtime 7/7] COPY data ./data
+#16 CACHED
+
+#17 exporting to image
+#17 exporting layers done
+#17 exporting manifest sha256:0baeffb2aee5b9e4f9c7ecc2448cf8913731bf0c2a536b5baf135b08d43db3af 0.0s done
+#17 exporting config sha256:c82ec7daf0b1c0c35c19d17e26529fe6ef3af034a937cdd551da9d020cb0f746 0.0s done
+#17 exporting attestation manifest sha256:7329487d46be66d64a7897b598a270ee4b31ad1e1c75c9c79f57fb7fec34b4b4 0.0s done
+#17 exporting manifest list sha256:dc3143a2e6fa7ffa314e031fe95c1eaf871487d0abb0a4c447f2b3c5867aae0b
+#17 exporting manifest list sha256:dc3143a2e6fa7ffa314e031fe95c1eaf871487d0abb0a4c447f2b3c5867aae0b 0.0s done
+#17 naming to docker.io/library/etl-app:test done
+#17 unpacking to docker.io/library/etl-app:test 0.0s done
+#17 DONE 0.1s
+
+#18 resolving provenance for metadata file
+#18 DONE 0.0s
+ etl-app:test  Built
+time="2025-12-03T11:24:55-05:00" level=warning msg="Found orphan containers ([laboratorio9-airflow-scheduler-1 laboratorio9-airflow-webserver-1 laboratorio9-airflow-init-1 laboratorio9-etl-app-1]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container laboratorio9-postgres-1  Recreate
+ Container laboratorio9-postgres-1  Recreated
+ Container laboratorio9-sut-1  Creating
+ Container laboratorio9-sut-1  Created
+Attaching to postgres-1, sut-1
+postgres-1  | 
+postgres-1  | PostgreSQL Database directory appears to contain a database; Skipping initialization
+postgres-1  | 
+postgres-1  | 2025-12-03 16:24:56.554 UTC [1] LOG:  starting PostgreSQL 13.23 (Debian 13.23-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+postgres-1  | 2025-12-03 16:24:56.554 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres-1  | 2025-12-03 16:24:56.555 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+postgres-1  | 2025-12-03 16:24:56.559 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1  | 2025-12-03 16:24:56.566 UTC [28] LOG:  database system was shut down at 2025-12-03 16:24:55 UTC
+postgres-1  | 2025-12-03 16:24:56.577 UTC [1] LOG:  database system is ready to accept connections
+[Ksut-1 exited with code 0
+[31m[1mAborting on container exit...[0m
+ Container laboratorio9-sut-1  Stopping
+ Container laboratorio9-sut-1  Stopped
+ Container laboratorio9-postgres-1  Stopping
+postgres-1  | 2025-12-03 16:25:01.007 UTC [1] LOG:  received fast shutdown request
+postgres-1  | 2025-12-03 16:25:01.010 UTC [1] LOG:  aborting any active transactions
+postgres-1  | 2025-12-03 16:25:01.012 UTC [1] LOG:  background worker "logical replication launcher" (PID 34) exited with exit code 1
+postgres-1  | 2025-12-03 16:25:01.012 UTC [29] LOG:  shutting down
+postgres-1  | 2025-12-03 16:25:01.035 UTC [1] LOG:  database system is shut down
+ Container laboratorio9-postgres-1  Stopped
+[Kpostgres-1 exited with code 0
