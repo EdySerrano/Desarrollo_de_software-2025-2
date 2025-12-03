@@ -1,0 +1,10 @@
+docker run -d \
+	-p 80:80 \
+	--name ejemplo-microservice \
+	ejemplo-microservice:0.1.0
+7c047a30976680e9551542d6a1388d6eaa91b6b61a36005884fd27bbf64e2bda
+CONTAINER ID   IMAGE                        COMMAND                  CREATED                  STATUS                  PORTS                                         NAMES
+7c047a309766   ejemplo-microservice:0.1.0   "uvicorn microservic…"   Less than a second ago   Up Less than a second   0.0.0.0:80->80/tcp, [::]:80->80/tcp           ejemplo-microservice
+5c85e9bb41cc   postgres:13                  "docker-entrypoint.s…"   4 hours ago              Up 4 hours (healthy)    5432/tcp                                      laboratorio9-postgres-1
+1c693df079dc   airflow-secure:1.0.0         "/usr/bin/dumb-init …"   5 hours ago              Up 4 hours              8080/tcp                                      laboratorio9-airflow-scheduler-1
+afffb33a20fa   airflow-secure:1.0.0         "/usr/bin/dumb-init …"   5 hours ago              Up 5 hours              0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp   laboratorio9-airflow-webserver-1

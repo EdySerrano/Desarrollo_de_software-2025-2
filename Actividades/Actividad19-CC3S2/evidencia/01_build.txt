@@ -1,0 +1,59 @@
+docker build -t ejemplo-microservice:0.1.0 .
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.16kB done
+#1 DONE 0.0s
+
+#2 [auth] library/python:pull token for registry-1.docker.io
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.12-slim
+#3 DONE 0.9s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 257B done
+#4 DONE 0.0s
+
+#5 [builder 1/4] FROM docker.io/library/python:3.12-slim@sha256:b43ff04d5df04ad5cabb80890b7ef74e8410e3395b19af970dcd52d7a4bff921
+#5 resolve docker.io/library/python:3.12-slim@sha256:b43ff04d5df04ad5cabb80890b7ef74e8410e3395b19af970dcd52d7a4bff921 0.0s done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 5.40kB done
+#6 DONE 0.0s
+
+#7 [builder 4/4] RUN pip install --user --no-cache-dir -r requirements.txt
+#7 CACHED
+
+#8 [production 2/6] RUN groupadd -r appuser     && useradd -m -r -g appuser appuser
+#8 CACHED
+
+#9 [builder 3/4] COPY requirements.txt .
+#9 CACHED
+
+#10 [production 3/6] WORKDIR /app
+#10 CACHED
+
+#11 [builder 2/4] WORKDIR /build
+#11 CACHED
+
+#12 [production 4/6] COPY --from=builder /root/.local /home/appuser/.local
+#12 CACHED
+
+#13 [production 5/6] COPY . /app
+#13 DONE 0.0s
+
+#14 [production 6/6] RUN chown -R appuser:appuser /app
+#14 DONE 0.3s
+
+#15 exporting to image
+#15 exporting layers 0.1s done
+#15 exporting manifest sha256:43aa84036907bcca9958a23504e827efdf5d73566f98d2334fc77e0b78d6a2ea 0.0s done
+#15 exporting config sha256:c0998883369412605ecde5fef536876193e94fb845c8fba5815b155da42cd962
+#15 exporting config sha256:c0998883369412605ecde5fef536876193e94fb845c8fba5815b155da42cd962 0.0s done
+#15 exporting attestation manifest sha256:2e68091c414be42881896eb8b32eb2b1c625e792803d955f0009d29ec86515df 0.0s done
+#15 exporting manifest list sha256:8e1e22714348911658fd3ce5e0d41d6b3a25002bdea462ecec7beb5b1993390a 0.0s done
+#15 naming to docker.io/library/ejemplo-microservice:0.1.0 done
+#15 unpacking to docker.io/library/ejemplo-microservice:0.1.0 0.1s done
+#15 DONE 0.3s
