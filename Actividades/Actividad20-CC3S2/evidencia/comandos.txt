@@ -1,0 +1,46 @@
+# Comandos para el flujo DevOps Local-First
+
+## 1. Configuración del Entorno
+# Iniciar Minikube con driver Docker y recursos definidos
+make minikube-up
+
+# Configurar el entorno de shell para usar el daemon de Docker de Minikube
+eval $(minikube docker-env)
+
+# Verificar variables de entorno
+make env
+
+## 2. Construcción y Pruebas Locales
+# Construir la imagen dentro de Minikube (sin push a registry externo)
+make build SERVICE=user-service
+make build SERVICE=order-service
+
+# Ejecutar pruebas de integración con Docker Compose
+make test SERVICE=user-service
+make test SERVICE=order-service
+
+## 3. Seguridad (Supply Chain)
+# Generar SBOM y escanear vulnerabilidades (requiere syft y grype)
+make sbom SERVICE=user-service
+make scan SERVICE=user-service
+
+## 4. Despliegue en Kubernetes
+# Preparar manifiestos (reemplazo de IMAGE_PLACEHOLDER)
+make k8s-prepare SERVICE=user-service
+make k8s-prepare SERVICE=order-service
+
+# Aplicar manifiestos al clúster
+make k8s-apply SERVICE=user-service
+make k8s-apply SERVICE=order-service
+
+## 5. Verificación (Smoke Tests)
+# Ejecutar pruebas de humo (verifica /health vía port-forward)
+make smoke SERVICE=user-service
+make smoke SERVICE=order-service
+
+## 6. Flujo Automatizado Completo
+# Para desarrollo (incluye build, test, deploy, smoke)
+make dev SERVICE=user-service
+
+# Para CI local (incluye seguridad: sbom, scan, sign)
+make pipeline SERVICE=user-service

@@ -1,0 +1,4 @@
+Laboratorio11/artifacts/user-service-sbom.json
+Laboratorio11/artifacts/user-service-grype.sarif
+Laboratorio11/artifacts/order-service-sbom.json
+Laboratorio11/artifacts/order-service-grype.sarif
